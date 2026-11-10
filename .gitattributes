@@ -1,0 +1,6 @@
+# Report this repository as the C#/.NET (WPF) project it is.
+*.cs    linguist-language=C#
+*.xaml  linguist-language=XAML
+*.ps1   linguist-language=PowerShell
+*.sql   linguist-language=SQL
+docs/** linguist-documentation
