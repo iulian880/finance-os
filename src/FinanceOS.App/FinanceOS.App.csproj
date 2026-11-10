@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>$(WindowsTfm)</TargetFramework>
+    <SupportedOSPlatformVersion>$(WindowsMinVersion)</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>FinanceOS</AssemblyName>
+    <RootNamespace>FinanceOS.App</RootNamespace>
+    <AssemblyTitle>Finance OS</AssemblyTitle>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="FinanceOS.App.Tests" />
+  </ItemGroup>
+
+  <!-- Developer pages (design-token gallery, later the component gallery) never ship in Release. -->
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <Page Remove="Dev\**" />
+    <Compile Remove="Dev\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The WinRT projection is huge and only a handful of its types are used (toasts):
+         precompiling it doubles its size for no startup benefit. Measured in docs/spike-m0.md. -->
+    <PublishReadyToRunExclude Include="Microsoft.Windows.SDK.NET.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="H.NotifyIcon.Wpf" />
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinanceOS.Core\FinanceOS.Core.csproj" />
+    <ProjectReference Include="..\FinanceOS.Data\FinanceOS.Data.csproj" />
+    <ProjectReference Include="..\FinanceOS.UI\FinanceOS.UI.csproj" />
+    <ProjectReference Include="..\FinanceOS.Platform.Windows\FinanceOS.Platform.Windows.csproj" />
+    <ProjectReference Include="..\FinanceOS.Integrations\FinanceOS.Integrations.csproj" />
+  </ItemGroup>
+
+</Project>

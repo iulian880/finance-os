@@ -1,0 +1,25 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <Deterministic>true</Deterministic>
+
+    <!-- Only ship the languages we localize to (keeps the self-contained publish smaller). -->
+    <SatelliteResourceLanguages>en;ro</SatelliteResourceLanguages>
+
+    <Company>Petcu Iulian</Company>
+    <Authors>Petcu Iulian</Authors>
+    <Product>Finance OS</Product>
+    <Copyright>Copyright © 2026 Petcu Iulian. All rights reserved.</Copyright>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+
+  <!-- Windows-specific projects share the same TFM so WinRT notification APIs are available. -->
+  <PropertyGroup>
+    <WindowsTfm>net10.0-windows10.0.19041.0</WindowsTfm>
+    <WindowsMinVersion>10.0.17763.0</WindowsMinVersion>
+  </PropertyGroup>
+</Project>

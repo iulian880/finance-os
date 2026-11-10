@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Section.Overview.Title" xml:space="preserve">
+    <value>Prezentare</value>
+  </data>
+  <data name="Section.Overview.Subtitle" xml:space="preserve">
+    <value>Ziua dintr-o privire: priorități, sumar și ce urmează.</value>
+  </data>
+  <data name="Section.MyDay.Title" xml:space="preserve">
+    <value>Ziua mea</value>
+  </data>
+  <data name="Section.MyDay.Subtitle" xml:space="preserve">
+    <value>Ce faci azi, ce a rămas în urmă și ce urmează mâine.</value>
+  </data>
+  <data name="Section.MyDay.EmptyTitle" xml:space="preserve">
+    <value>Ziua ta e liberă</value>
+  </data>
+  <data name="Section.MyDay.EmptyDescription" xml:space="preserve">
+    <value>Aici apar taskurile cu termen azi, cele întârziate și ce vine mâine, în ordinea în care contează.</value>
+  </data>
+  <data name="Section.Tasks.Title" xml:space="preserve">
+    <value>Taskuri</value>
+  </data>
+  <data name="Section.Tasks.Subtitle" xml:space="preserve">
+    <value>Toate taskurile, cu vederile Azi, Următoare, Întârziate și Finalizate.</value>
+  </data>
+  <data name="Section.Tasks.EmptyTitle" xml:space="preserve">
+    <value>Niciun task încă</value>
+  </data>
+  <data name="Section.Tasks.EmptyDescription" xml:space="preserve">
+    <value>Lista completă a taskurilor, cu filtre, sortare și editare rapidă în panoul din dreapta.</value>
+  </data>
+  <data name="Section.Calendar.Title" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="Section.Calendar.Subtitle" xml:space="preserve">
+    <value>Termenele tale pe lună, săptămână și zi.</value>
+  </data>
+  <data name="Section.Calendar.EmptyTitle" xml:space="preserve">
+    <value>Calendarul e gol</value>
+  </data>
+  <data name="Section.Calendar.EmptyDescription" xml:space="preserve">
+    <value>Vederi lună, săptămână, zi și agendă. Muți un task pe altă zi trăgându-l; schimbarea termenului cere confirmare.</value>
+  </data>
+  <data name="Section.Reminders.Title" xml:space="preserve">
+    <value>Remindere</value>
+  </data>
+  <data name="Section.Reminders.Subtitle" xml:space="preserve">
+    <value>Toate reminderele, inclusiv cele ratate.</value>
+  </data>
+  <data name="Section.Reminders.EmptyTitle" xml:space="preserve">
+    <value>Niciun reminder</value>
+  </data>
+  <data name="Section.Reminders.EmptyDescription" xml:space="preserve">
+    <value>Remindere la oră fixă sau relative la termen, care vin și când aplicația e închisă sau PC-ul a fost în sleep.</value>
+  </data>
+  <data name="Section.Workflows.Title" xml:space="preserve">
+    <value>Workflow-uri</value>
+  </data>
+  <data name="Section.Workflows.Subtitle" xml:space="preserve">
+    <value>Procese repetitive transformate în pași clari.</value>
+  </data>
+  <data name="Section.Workflows.EmptyTitle" xml:space="preserve">
+    <value>Niciun workflow</value>
+  </data>
+  <data name="Section.Workflows.EmptyDescription" xml:space="preserve">
+    <value>Șabloane pentru închidere de lună, raportare sau intercompany: etape, checklist-uri și termene generate automat.</value>
+  </data>
+  <data name="Section.Projects.Title" xml:space="preserve">
+    <value>Proiecte</value>
+  </data>
+  <data name="Section.Projects.Subtitle" xml:space="preserve">
+    <value>Taskuri grupate pe proiecte, cu progres.</value>
+  </data>
+  <data name="Section.Projects.EmptyTitle" xml:space="preserve">
+    <value>Niciun proiect</value>
+  </data>
+  <data name="Section.Projects.EmptyDescription" xml:space="preserve">
+    <value>Grupează taskurile pe proiecte și vezi dintr-o privire cât a rămas.</value>
+  </data>
+  <data name="Section.Analytics.Title" xml:space="preserve">
+    <value>Analiză</value>
+  </data>
+  <data name="Section.Analytics.Subtitle" xml:space="preserve">
+    <value>Cum îți merge munca, doar pentru tine.</value>
+  </data>
+  <data name="Section.Analytics.EmptyTitle" xml:space="preserve">
+    <value>Încă nu sunt date</value>
+  </data>
+  <data name="Section.Analytics.EmptyDescription" xml:space="preserve">
+    <value>Taskuri finalizate pe zi și săptămână, întârzieri și timp estimat vs. real. Fără „scor de productivitate”.</value>
+  </data>
+  <data name="Section.Archive.Title" xml:space="preserve">
+    <value>Arhivă</value>
+  </data>
+  <data name="Section.Archive.Subtitle" xml:space="preserve">
+    <value>Taskurile finalizate și arhivate, căutabile oricând.</value>
+  </data>
+  <data name="Section.Archive.EmptyTitle" xml:space="preserve">
+    <value>Arhiva e goală</value>
+  </data>
+  <data name="Section.Archive.EmptyDescription" xml:space="preserve">
+    <value>Taskurile finalizate și cele arhivate rămân aici și apar în căutare, ca să le poți regăsi oricând.</value>
+  </data>
+  <data name="Section.Settings.Title" xml:space="preserve">
+    <value>Setări</value>
+  </data>
+  <data name="Section.Settings.Subtitle" xml:space="preserve">
+    <value>Aspect, limbă, ore de lucru și notificări.</value>
+  </data>
+  <data name="Nav.Group.Organize" xml:space="preserve">
+    <value>Organizare</value>
+  </data>
+  <data name="Nav.Group.Insight" xml:space="preserve">
+    <value>Perspectivă</value>
+  </data>
+  <data name="Common.ComingSoon" xml:space="preserve">
+    <value>În curând</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>Renunță</value>
+  </data>
+  <data name="Common.Exit" xml:space="preserve">
+    <value>Ieșire</value>
+  </data>
+  <data name="Shell.Navigation" xml:space="preserve">
+    <value>Navigare</value>
+  </data>
+  <data name="Shell.ToggleSidebar.Name" xml:space="preserve">
+    <value>Restrânge sau extinde bara laterală</value>
+  </data>
+  <data name="Shell.ToggleSidebar.ToolTip" xml:space="preserve">
+    <value>Restrânge / extinde bara laterală (Ctrl+B)</value>
+  </data>
+  <data name="Shell.Search" xml:space="preserve">
+    <value>Caută sau rulează o comandă</value>
+  </data>
+  <data name="Shell.Search.Name" xml:space="preserve">
+    <value>Caută sau rulează o comandă (Ctrl+K)</value>
+  </data>
+  <data name="Shell.ToggleTheme.Name" xml:space="preserve">
+    <value>Comută tema</value>
+  </data>
+  <data name="Shell.ToggleTheme.ToolTip" xml:space="preserve">
+    <value>Comută tema luminoasă / întunecată</value>
+  </data>
+  <data name="Shell.Notifications" xml:space="preserve">
+    <value>Notificări</value>
+  </data>
+  <data name="Shell.DetailsPanel" xml:space="preserve">
+    <value>Panoul de detalii</value>
+  </data>
+  <data name="Shell.Details" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+  <data name="Shell.ClosePanel" xml:space="preserve">
+    <value>Închide panoul</value>
+  </data>
+  <data name="Shell.DetailsEmpty.Title" xml:space="preserve">
+    <value>Niciun task selectat</value>
+  </data>
+  <data name="Shell.DetailsEmpty.Description" xml:space="preserve">
+    <value>Selectează un task ca să-i vezi aici detaliile, checklist-ul și reminderele, fără să părăsești lista.</value>
+  </data>
+  <data name="Shell.NotificationsEmpty.Title" xml:space="preserve">
+    <value>Nicio notificare</value>
+  </data>
+  <data name="Shell.NotificationsEmpty.Description" xml:space="preserve">
+    <value>Reminderele și follow-up-urile apar aici, inclusiv cele ratate cât timp PC-ul a fost oprit sau în sleep.</value>
+  </data>
+  <data name="Shell.Palette.Placeholder" xml:space="preserve">
+    <value>Caută o comandă sau o secțiune…</value>
+  </data>
+  <data name="Shell.Palette.Empty" xml:space="preserve">
+    <value>Niciun rezultat. Încearcă alt cuvânt.</value>
+  </data>
+  <data name="Command.Group.Navigation" xml:space="preserve">
+    <value>Navigare</value>
+  </data>
+  <data name="Command.Group.Appearance" xml:space="preserve">
+    <value>Aspect</value>
+  </data>
+  <data name="Command.Group.Panel" xml:space="preserve">
+    <value>Panou</value>
+  </data>
+  <data name="Command.GoTo" xml:space="preserve">
+    <value>Mergi la {0}</value>
+  </data>
+  <data name="Command.ToggleTheme" xml:space="preserve">
+    <value>Comută tema (luminos / întunecat)</value>
+  </data>
+  <data name="Command.ToggleSidebar" xml:space="preserve">
+    <value>Restrânge / extinde bara laterală</value>
+  </data>
+  <data name="Command.ShowNotifications" xml:space="preserve">
+    <value>Afișează notificările</value>
+  </data>
+  <data name="Command.ShowDetails" xml:space="preserve">
+    <value>Afișează panoul de detalii</value>
+  </data>
+  <data name="Overview.Greeting.Morning" xml:space="preserve">
+    <value>Bună dimineața</value>
+  </data>
+  <data name="Overview.Greeting.Afternoon" xml:space="preserve">
+    <value>Bună ziua</value>
+  </data>
+  <data name="Overview.Greeting.Evening" xml:space="preserve">
+    <value>Bună seara</value>
+  </data>
+  <data name="Overview.Stat.InProgress" xml:space="preserve">
+    <value>În lucru</value>
+  </data>
+  <data name="Overview.Stat.InProgress.Hint" xml:space="preserve">
+    <value>taskuri deschise</value>
+  </data>
+  <data name="Overview.Stat.DoneToday" xml:space="preserve">
+    <value>Finalizate azi</value>
+  </data>
+  <data name="Overview.Stat.DoneToday.Hint" xml:space="preserve">
+    <value>de la miezul nopții</value>
+  </data>
+  <data name="Overview.Stat.Overdue" xml:space="preserve">
+    <value>Întârziate</value>
+  </data>
+  <data name="Overview.Stat.Overdue.Hint" xml:space="preserve">
+    <value>termen depășit</value>
+  </data>
+  <data name="Overview.Stat.Waiting" xml:space="preserve">
+    <value>În așteptare</value>
+  </data>
+  <data name="Overview.Stat.Waiting.Hint" xml:space="preserve">
+    <value>aștepți răspuns</value>
+  </data>
+  <data name="Overview.Top3.Header" xml:space="preserve">
+    <value>Top 3 priorități</value>
+  </data>
+  <data name="Overview.Top3.Description" xml:space="preserve">
+    <value>Ce contează cel mai mult azi.</value>
+  </data>
+  <data name="Overview.Top3.EmptyTitle" xml:space="preserve">
+    <value>Nicio prioritate încă</value>
+  </data>
+  <data name="Overview.Top3.EmptyDescription" xml:space="preserve">
+    <value>Fixează taskuri sau dă-le o prioritate; cele mai importante trei apar aici.</value>
+  </data>
+  <data name="Overview.Today.Header" xml:space="preserve">
+    <value>Azi</value>
+  </data>
+  <data name="Overview.Today.Description" xml:space="preserve">
+    <value>Termene și remindere, în ordinea orelor.</value>
+  </data>
+  <data name="Overview.Today.EmptyTitle" xml:space="preserve">
+    <value>Nimic programat</value>
+  </data>
+  <data name="Overview.Today.EmptyDescription" xml:space="preserve">
+    <value>Când adaugi taskuri cu termen sau remindere, ziua ta apare aici ca o axă a timpului.</value>
+  </data>
+  <data name="Settings.Appearance.Header" xml:space="preserve">
+    <value>Aspect</value>
+  </data>
+  <data name="Settings.Appearance.Description" xml:space="preserve">
+    <value>Se aplică imediat și se păstrează la următoarea pornire.</value>
+  </data>
+  <data name="Settings.Theme" xml:space="preserve">
+    <value>Temă</value>
+  </data>
+  <data name="Settings.Theme.System" xml:space="preserve">
+    <value>Ca Windows</value>
+  </data>
+  <data name="Settings.Theme.Light" xml:space="preserve">
+    <value>Luminos</value>
+  </data>
+  <data name="Settings.Theme.Dark" xml:space="preserve">
+    <value>Întunecat</value>
+  </data>
+  <data name="Settings.Accent" xml:space="preserve">
+    <value>Culoare de accent</value>
+  </data>
+  <data name="Accent.indigo" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="Accent.blue" xml:space="preserve">
+    <value>Albastru</value>
+  </data>
+  <data name="Accent.teal" xml:space="preserve">
+    <value>Verde petrol</value>
+  </data>
+  <data name="Accent.emerald" xml:space="preserve">
+    <value>Smarald</value>
+  </data>
+  <data name="Accent.violet" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="Accent.rose" xml:space="preserve">
+    <value>Roz</value>
+  </data>
+  <data name="Accent.amber" xml:space="preserve">
+    <value>Chihlimbar</value>
+  </data>
+  <data name="Accent.graphite" xml:space="preserve">
+    <value>Grafit</value>
+  </data>
+  <data name="Settings.Language.Header" xml:space="preserve">
+    <value>Limbă și format</value>
+  </data>
+  <data name="Settings.Language.Description" xml:space="preserve">
+    <value>Se aplică imediat în toată aplicația și se păstrează la următoarea pornire.</value>
+  </data>
+  <data name="Settings.Language" xml:space="preserve">
+    <value>Limba interfeței</value>
+  </data>
+  <data name="Settings.Data.Header" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Settings.Data.Description" xml:space="preserve">
+    <value>Totul rămâne local, pe acest calculator. Nimic nu se trimite în cloud.</value>
+  </data>
+  <data name="Settings.Data.Folder" xml:space="preserve">
+    <value>Folderul aplicației</value>
+  </data>
+  <data name="Settings.Data.FolderHelp" xml:space="preserve">
+    <value>Baza de date, backup-urile și jurnalele sunt aici.</value>
+  </data>
+  <data name="Settings.Data.BackupNow" xml:space="preserve">
+    <value>Fă un backup acum</value>
+  </data>
+  <data name="Settings.Data.OpenFolder" xml:space="preserve">
+    <value>Deschide folderul</value>
+  </data>
+  <data name="Settings.Backup.Created" xml:space="preserve">
+    <value>Backup creat: {0}.</value>
+  </data>
+  <data name="Settings.Backup.Failed" xml:space="preserve">
+    <value>Backup-ul nu a reușit. Detaliile sunt în jurnalul aplicației, în folderul de mai sus.</value>
+  </data>
+  <data name="Settings.Backup.Last" xml:space="preserve">
+    <value>Ultimul backup: {0}. Automat o dată pe zi; se păstrează 7 zilnice și 4 săptămânale.</value>
+  </data>
+  <data name="Settings.Backup.None" xml:space="preserve">
+    <value>Încă niciun backup. Primul se face automat azi, la scurt timp după pornire.</value>
+  </data>
+  <data name="Settings.About.Header" xml:space="preserve">
+    <value>Despre</value>
+  </data>
+  <data name="Settings.About.Description" xml:space="preserve">
+    <value>Finance OS, aplicație locală pentru taskurile și termenele din finanțe.</value>
+  </data>
+  <data name="Settings.About.Contact" xml:space="preserve">
+    <value>Sugestii de îmbunătățire sau probleme găsite? Scrie la</value>
+  </data>
+  <data name="Settings.About.Feedback" xml:space="preserve">
+    <value>Trimite o sugestie sau un bug</value>
+  </data>
+  <data name="Settings.About.FeedbackToolTip" xml:space="preserve">
+    <value>Deschide un e-mail nou, cu versiunea aplicației completată</value>
+  </data>
+  <data name="Settings.About.Version" xml:space="preserve">
+    <value>Versiunea</value>
+  </data>
+  <data name="Feedback.Subject" xml:space="preserve">
+    <value>Finance OS {0} – sugestie / problemă</value>
+  </data>
+  <data name="Feedback.Describe" xml:space="preserve">
+    <value>Descrie sugestia sau problema:</value>
+  </data>
+  <data name="Feedback.Steps" xml:space="preserve">
+    <value>Pași pentru a reproduce (dacă e o problemă):</value>
+  </data>
+  <data name="Feedback.Version" xml:space="preserve">
+    <value>Versiune</value>
+  </data>
+  <data name="Feedback.Language" xml:space="preserve">
+    <value>Limbă</value>
+  </data>
+  <data name="Recovery.WindowTitle" xml:space="preserve">
+    <value>Finance OS — recuperarea datelor</value>
+  </data>
+  <data name="Recovery.Title.Corrupt" xml:space="preserve">
+    <value>Baza de date nu poate fi deschisă în siguranță</value>
+  </data>
+  <data name="Recovery.Title.TooNew" xml:space="preserve">
+    <value>Datele sunt dintr-o versiune mai nouă a Finance OS</value>
+  </data>
+  <data name="Recovery.Title.Failed" xml:space="preserve">
+    <value>Finance OS nu a putut deschide baza de date</value>
+  </data>
+  <data name="Recovery.Message.Corrupt" xml:space="preserve">
+    <value>Verificarea de integritate de la pornire a găsit probleme în fișierul de date, așa că nu l-am folosit și nu l-am modificat. Poți restaura un backup: starea de acum se păstrează oricum ca o copie separată.</value>
+  </data>
+  <data name="Recovery.Message.TooNew" xml:space="preserve">
+    <value>Datele tale au fost salvate de o versiune mai nouă (schema {0}), iar aceasta înțelege doar până la schema {1}. Nu am modificat nimic. Pornește versiunea nouă a aplicației ca să lucrezi mai departe.</value>
+  </data>
+  <data name="Recovery.Message.Failed" xml:space="preserve">
+    <value>Fișierul de date pare blocat de alt program (de exemplu un antivirus sau un backup în curs) sau lipsesc permisiunile. Datele nu au fost modificate. Încearcă din nou peste câteva secunde.</value>
+  </data>
+  <data name="Recovery.Error.Restore" xml:space="preserve">
+    <value>Restaurarea nu a reușit. Alege alt backup sau deschide folderul de date.</value>
+  </data>
+  <data name="Recovery.Error.Retry" xml:space="preserve">
+    <value>Baza de date este încă indisponibilă.</value>
+  </data>
+  <data name="Recovery.Error.StartFresh" xml:space="preserve">
+    <value>Nu am putut crea o bază de date nouă.</value>
+  </data>
+  <data name="Recovery.Backups.Header" xml:space="preserve">
+    <value>Backup-uri disponibile</value>
+  </data>
+  <data name="Recovery.Backups.Description" xml:space="preserve">
+    <value>Cel mai recent backup bun este selectat. Backup-urile se fac automat o dată pe zi și înainte de orice actualizare.</value>
+  </data>
+  <data name="Recovery.Backups.None" xml:space="preserve">
+    <value>Nu există încă niciun backup pentru aceste date.</value>
+  </data>
+  <data name="Recovery.Backup.Unusable" xml:space="preserve">
+    <value>nu poate fi folosit</value>
+  </data>
+  <data name="Recovery.StartFresh.Ask" xml:space="preserve">
+    <value>Niciun backup potrivit? Pornește cu o bază de date goală</value>
+  </data>
+  <data name="Recovery.StartFresh.Title" xml:space="preserve">
+    <value>Pornești cu o bază de date goală?</value>
+  </data>
+  <data name="Recovery.StartFresh.Text" xml:space="preserve">
+    <value>Fișierul actual nu se șterge: rămâne în folderul de backup-uri ca o copie „damaged”, pentru analiză. Taskurile din el nu vor apărea în aplicație.</value>
+  </data>
+  <data name="Recovery.StartFresh.Confirm" xml:space="preserve">
+    <value>Da, pornește cu o bază goală</value>
+  </data>
+  <data name="Recovery.TechnicalDetails" xml:space="preserve">
+    <value>Detalii tehnice:</value>
+  </data>
+  <data name="Recovery.OpenDataFolder" xml:space="preserve">
+    <value>Deschide folderul de date</value>
+  </data>
+  <data name="Recovery.Restore" xml:space="preserve">
+    <value>Restaurează backup-ul selectat</value>
+  </data>
+  <data name="Recovery.Retry" xml:space="preserve">
+    <value>Încearcă din nou</value>
+  </data>
+  <data name="Backup.Kind.Daily" xml:space="preserve">
+    <value>Zilnic</value>
+  </data>
+  <data name="Backup.Kind.PreMigration" xml:space="preserve">
+    <value>Înainte de actualizare</value>
+  </data>
+  <data name="Backup.Kind.PreRestore" xml:space="preserve">
+    <value>Înainte de o restaurare</value>
+  </data>
+  <data name="Backup.Kind.PreImport" xml:space="preserve">
+    <value>Înainte de import</value>
+  </data>
+  <data name="Backup.Kind.Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="Backup.Kind.Other" xml:space="preserve">
+    <value>Copie</value>
+  </data>
+  <data name="Tray.Open" xml:space="preserve">
+    <value>Deschide Finance OS</value>
+  </data>
+  <data name="Toast.Snooze" xml:space="preserve">
+    <value>Amână</value>
+  </data>
+  <data name="Toast.Done" xml:space="preserve">
+    <value>Finalizat</value>
+  </data>
+  <data name="Toast.Snoozed.Title" xml:space="preserve">
+    <value>Reminder amânat</value>
+  </data>
+  <data name="Toast.Snoozed.Body" xml:space="preserve">
+    <value>Amânat {0} min (de la {1})</value>
+  </data>
+  <data name="Tasks.QuickAdd.Placeholder" xml:space="preserve">
+    <value>Adaugă un task și apasă Enter</value>
+  </data>
+  <data name="Tasks.QuickAdd.Name" xml:space="preserve">
+    <value>Task nou</value>
+  </data>
+  <data name="Tasks.Views" xml:space="preserve">
+    <value>Vederi</value>
+  </data>
+  <data name="Tasks.View.All" xml:space="preserve">
+    <value>Toate</value>
+  </data>
+  <data name="Tasks.View.Today" xml:space="preserve">
+    <value>Azi</value>
+  </data>
+  <data name="Tasks.View.Upcoming" xml:space="preserve">
+    <value>Următoare</value>
+  </data>
+  <data name="Tasks.View.Overdue" xml:space="preserve">
+    <value>Întârziate</value>
+  </data>
+  <data name="Tasks.View.Completed" xml:space="preserve">
+    <value>Finalizate</value>
+  </data>
+  <data name="Tasks.Sort" xml:space="preserve">
+    <value>Sortare</value>
+  </data>
+  <data name="Tasks.Sort.Smart" xml:space="preserve">
+    <value>Recomandată</value>
+  </data>
+  <data name="Tasks.Sort.DueDate" xml:space="preserve">
+    <value>Termen</value>
+  </data>
+  <data name="Tasks.Sort.Priority" xml:space="preserve">
+    <value>Prioritate</value>
+  </data>
+  <data name="Tasks.Sort.Title" xml:space="preserve">
+    <value>Titlu</value>
+  </data>
+  <data name="Tasks.Sort.Created" xml:space="preserve">
+    <value>Cele mai noi</value>
+  </data>
+  <data name="Tasks.List" xml:space="preserve">
+    <value>Taskuri</value>
+  </data>
+  <data name="Tasks.Row.Complete" xml:space="preserve">
+    <value>Marchează ca finalizat</value>
+  </data>
+  <data name="Tasks.Row.Pinned" xml:space="preserve">
+    <value>Fixat</value>
+  </data>
+  <data name="Tasks.Empty.All.Title" xml:space="preserve">
+    <value>Niciun task deschis</value>
+  </data>
+  <data name="Tasks.Empty.All.Description" xml:space="preserve">
+    <value>Scrie un task mai sus și apasă Enter. Ctrl+N te aduce aici de oriunde.</value>
+  </data>
+  <data name="Tasks.Empty.Today.Title" xml:space="preserve">
+    <value>Nimic cu termen azi</value>
+  </data>
+  <data name="Tasks.Empty.Today.Description" xml:space="preserve">
+    <value>Aici apar taskurile cu termen azi. Un task adăugat în această vedere primește termen azi.</value>
+  </data>
+  <data name="Tasks.Empty.Upcoming.Title" xml:space="preserve">
+    <value>Nimic programat mai departe</value>
+  </data>
+  <data name="Tasks.Empty.Upcoming.Description" xml:space="preserve">
+    <value>Taskurile cu termen după azi, în ordinea datelor.</value>
+  </data>
+  <data name="Tasks.Empty.Overdue.Title" xml:space="preserve">
+    <value>Nimic întârziat</value>
+  </data>
+  <data name="Tasks.Empty.Overdue.Description" xml:space="preserve">
+    <value>Aici apar taskurile cu termenul depășit.</value>
+  </data>
+  <data name="Tasks.Empty.Completed.Title" xml:space="preserve">
+    <value>Nimic finalizat încă</value>
+  </data>
+  <data name="Tasks.Empty.Completed.Description" xml:space="preserve">
+    <value>Taskurile finalizate și anulate, cele mai recente primele.</value>
+  </data>
+  <data name="Due.Today" xml:space="preserve">
+    <value>Azi</value>
+  </data>
+  <data name="Due.Tomorrow" xml:space="preserve">
+    <value>Mâine</value>
+  </data>
+  <data name="Due.Yesterday" xml:space="preserve">
+    <value>Ieri</value>
+  </data>
+  <data name="Priority.None" xml:space="preserve">
+    <value>Fără prioritate</value>
+  </data>
+  <data name="Priority.Low" xml:space="preserve">
+    <value>Scăzută</value>
+  </data>
+  <data name="Priority.Medium" xml:space="preserve">
+    <value>Medie</value>
+  </data>
+  <data name="Priority.High" xml:space="preserve">
+    <value>Ridicată</value>
+  </data>
+  <data name="Priority.Urgent" xml:space="preserve">
+    <value>Urgentă</value>
+  </data>
+  <data name="Status.status-todo" xml:space="preserve">
+    <value>De făcut</value>
+  </data>
+  <data name="Status.status-active" xml:space="preserve">
+    <value>În lucru</value>
+  </data>
+  <data name="Status.status-waiting" xml:space="preserve">
+    <value>În așteptare</value>
+  </data>
+  <data name="Status.status-blocked" xml:space="preserve">
+    <value>Blocat</value>
+  </data>
+  <data name="Status.status-done" xml:space="preserve">
+    <value>Finalizat</value>
+  </data>
+  <data name="Status.status-cancelled" xml:space="preserve">
+    <value>Anulat</value>
+  </data>
+  <data name="Details.Title" xml:space="preserve">
+    <value>Titlu</value>
+  </data>
+  <data name="Details.Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Details.Priority" xml:space="preserve">
+    <value>Prioritate</value>
+  </data>
+  <data name="Details.DueDate" xml:space="preserve">
+    <value>Termen</value>
+  </data>
+  <data name="Details.DueTime" xml:space="preserve">
+    <value>Ora</value>
+  </data>
+  <data name="Details.DueTimeHint" xml:space="preserve">
+    <value>Opțional.</value>
+  </data>
+  <data name="Details.Category" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="Details.Project" xml:space="preserve">
+    <value>Proiect</value>
+  </data>
+  <data name="Details.NoCategory" xml:space="preserve">
+    <value>Fără categorie</value>
+  </data>
+  <data name="Details.NoProject" xml:space="preserve">
+    <value>Fără proiect</value>
+  </data>
+  <data name="Details.Tags" xml:space="preserve">
+    <value>Tag-uri</value>
+  </data>
+  <data name="Details.AddTag" xml:space="preserve">
+    <value>Adaugă un tag și apasă Enter</value>
+  </data>
+  <data name="Details.RemoveTag" xml:space="preserve">
+    <value>Scoate tag-ul {0}</value>
+  </data>
+  <data name="Details.Description" xml:space="preserve">
+    <value>Descriere</value>
+  </data>
+  <data name="Details.Notes" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Details.Checklist" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="Details.AddChecklistItem" xml:space="preserve">
+    <value>Adaugă un pas și apasă Enter</value>
+  </data>
+  <data name="Details.RemoveChecklistItem" xml:space="preserve">
+    <value>Șterge pasul</value>
+  </data>
+  <data name="Details.Subtasks" xml:space="preserve">
+    <value>Subtaskuri</value>
+  </data>
+  <data name="Details.AddSubtask" xml:space="preserve">
+    <value>Adaugă un subtask și apasă Enter</value>
+  </data>
+  <data name="Details.OpenTask" xml:space="preserve">
+    <value>Deschide {0}</value>
+  </data>
+  <data name="Details.Parent" xml:space="preserve">
+    <value>Subtask al</value>
+  </data>
+  <data name="Details.References" xml:space="preserve">
+    <value>Persoane și referințe</value>
+  </data>
+  <data name="Details.Requester" xml:space="preserve">
+    <value>Cerut de</value>
+  </data>
+  <data name="Details.Responsible" xml:space="preserve">
+    <value>Responsabil</value>
+  </data>
+  <data name="Details.ExternalRef" xml:space="preserve">
+    <value>Referință</value>
+  </data>
+  <data name="Details.ExternalRefHint" xml:space="preserve">
+    <value>De exemplu numărul facturii sau al tichetului.</value>
+  </data>
+  <data name="Details.ExternalUrl" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="Details.OpenLink" xml:space="preserve">
+    <value>Deschide linkul în browser</value>
+  </data>
+  <data name="Details.Complete" xml:space="preserve">
+    <value>Marchează finalizat</value>
+  </data>
+  <data name="Details.Reopen" xml:space="preserve">
+    <value>Redeschide</value>
+  </data>
+  <data name="Details.Duplicate" xml:space="preserve">
+    <value>Duplică</value>
+  </data>
+  <data name="Details.Archive" xml:space="preserve">
+    <value>Arhivează</value>
+  </data>
+  <data name="Details.Unarchive" xml:space="preserve">
+    <value>Scoate din arhivă</value>
+  </data>
+  <data name="Details.Delete" xml:space="preserve">
+    <value>Mută în coș</value>
+  </data>
+  <data name="Details.Pin" xml:space="preserve">
+    <value>Fixează sus</value>
+  </data>
+  <data name="Details.Unpin" xml:space="preserve">
+    <value>Anulează fixarea</value>
+  </data>
+  <data name="Details.Created" xml:space="preserve">
+    <value>Creat {0}</value>
+  </data>
+  <data name="Details.Updated" xml:space="preserve">
+    <value>modificat {0}</value>
+  </data>
+  <data name="Details.CompletedAt" xml:space="preserve">
+    <value>Finalizat {0}</value>
+  </data>
+  <data name="Details.Archived" xml:space="preserve">
+    <value>Taskul e arhivat.</value>
+  </data>
+  <data name="Details.CopyTitle" xml:space="preserve">
+    <value>{0} (copie)</value>
+  </data>
+  <data name="Validation.required" xml:space="preserve">
+    <value>Câmp obligatoriu.</value>
+  </data>
+  <data name="Validation.too_long" xml:space="preserve">
+    <value>Textul e prea lung.</value>
+  </data>
+  <data name="Validation.not_found" xml:space="preserve">
+    <value>Nu mai există.</value>
+  </data>
+  <data name="Validation.deleted" xml:space="preserve">
+    <value>A fost șters.</value>
+  </data>
+  <data name="Validation.out_of_range" xml:space="preserve">
+    <value>Valoarea e în afara limitelor.</value>
+  </data>
+  <data name="Validation.time_without_date" xml:space="preserve">
+    <value>Alege întâi o dată.</value>
+  </data>
+  <data name="Validation.start_after_due" xml:space="preserve">
+    <value>Începutul e după termen.</value>
+  </data>
+  <data name="Validation.invalid_url" xml:space="preserve">
+    <value>Doar linkuri http:// sau https://.</value>
+  </data>
+  <data name="Validation.invalid_color" xml:space="preserve">
+    <value>Culoare nevalidă.</value>
+  </data>
+  <data name="Validation.duplicate" xml:space="preserve">
+    <value>Există deja unul cu acest nume.</value>
+  </data>
+  <data name="Validation.self_parent" xml:space="preserve">
+    <value>Un task nu poate fi propriul subtask.</value>
+  </data>
+  <data name="Validation.nested_subtask" xml:space="preserve">
+    <value>Un subtask nu poate avea la rândul lui subtaskuri.</value>
+  </data>
+  <data name="Validation.has_subtasks" xml:space="preserve">
+    <value>Taskul are subtaskuri, deci nu poate deveni subtask.</value>
+  </data>
+  <data name="Validation.parent_in_trash" xml:space="preserve">
+    <value>Restaurează întâi taskul părinte.</value>
+  </data>
+  <data name="Validation.read_only" xml:space="preserve">
+    <value>Taskul e în coș; restaurează-l ca să-l modifici.</value>
+  </data>
+  <data name="Toast.Deleted.Title" xml:space="preserve">
+    <value>Mutat în coș</value>
+  </data>
+  <data name="Toast.Archived.Title" xml:space="preserve">
+    <value>Arhivat</value>
+  </data>
+  <data name="Toast.Duplicated.Title" xml:space="preserve">
+    <value>Copie creată</value>
+  </data>
+  <data name="Toast.Undo" xml:space="preserve">
+    <value>Anulează</value>
+  </data>
+  <data name="Toast.Undone.Title" xml:space="preserve">
+    <value>Anulat</value>
+  </data>
+  <data name="Toast.UndoConflict.Title" xml:space="preserve">
+    <value>Nu se poate anula</value>
+  </data>
+  <data name="Toast.UndoConflict.Body" xml:space="preserve">
+    <value>Taskul s-a modificat după acea acțiune.</value>
+  </data>
+  <data name="Toast.NothingToUndo" xml:space="preserve">
+    <value>Nimic de anulat</value>
+  </data>
+  <data name="Toast.Failed.Title" xml:space="preserve">
+    <value>Nu a reușit</value>
+  </data>
+  <data name="Action.task.create" xml:space="preserve">
+    <value>Creare task</value>
+  </data>
+  <data name="Action.task.edit" xml:space="preserve">
+    <value>Editare task</value>
+  </data>
+  <data name="Action.task.status" xml:space="preserve">
+    <value>Schimbare status</value>
+  </data>
+  <data name="Action.task.complete" xml:space="preserve">
+    <value>Finalizare task</value>
+  </data>
+  <data name="Action.task.reopen" xml:space="preserve">
+    <value>Redeschidere task</value>
+  </data>
+  <data name="Action.task.delete" xml:space="preserve">
+    <value>Mutare în coș</value>
+  </data>
+  <data name="Action.task.restore" xml:space="preserve">
+    <value>Restaurare din coș</value>
+  </data>
+  <data name="Action.task.archive" xml:space="preserve">
+    <value>Arhivare</value>
+  </data>
+  <data name="Action.task.unarchive" xml:space="preserve">
+    <value>Scoatere din arhivă</value>
+  </data>
+  <data name="Action.task.duplicate" xml:space="preserve">
+    <value>Duplicare</value>
+  </data>
+  <data name="Action.task.move" xml:space="preserve">
+    <value>Mutare task</value>
+  </data>
+  <data name="Action.checklist.add" xml:space="preserve">
+    <value>Adăugare pas</value>
+  </data>
+  <data name="Action.checklist.check" xml:space="preserve">
+    <value>Bifare pas</value>
+  </data>
+  <data name="Action.checklist.rename" xml:space="preserve">
+    <value>Redenumire pas</value>
+  </data>
+  <data name="Action.checklist.remove" xml:space="preserve">
+    <value>Ștergere pas</value>
+  </data>
+  <data name="Action.tag.create" xml:space="preserve">
+    <value>Creare tag</value>
+  </data>
+  <data name="Action.Other" xml:space="preserve">
+    <value>Ultima acțiune</value>
+  </data>
+  <data name="Command.Group.Tasks" xml:space="preserve">
+    <value>Taskuri</value>
+  </data>
+  <data name="Command.NewTask" xml:space="preserve">
+    <value>Task nou</value>
+  </data>
+  <data name="Command.Undo" xml:space="preserve">
+    <value>Anulează ultima acțiune</value>
+  </data>
+  <data name="MyDay.Group.Overdue" xml:space="preserve">
+    <value>Întârziate</value>
+  </data>
+  <data name="MyDay.Group.Today" xml:space="preserve">
+    <value>Azi</value>
+  </data>
+  <data name="MyDay.Group.Tomorrow" xml:space="preserve">
+    <value>Mâine</value>
+  </data>
+  <data name="MyDay.DoneToday" xml:space="preserve">
+    <value>Finalizate azi: {0}</value>
+  </data>
+  <data name="MyDay.List" xml:space="preserve">
+    <value>Ziua mea</value>
+  </data>
+  <data name="Overview.Today.AllDay" xml:space="preserve">
+    <value>Toată ziua</value>
+  </data>
+  <data name="Overview.Top3.List" xml:space="preserve">
+    <value>Top 3 priorități</value>
+  </data>
+  <data name="Overview.Today.List" xml:space="preserve">
+    <value>Ziua de azi</value>
+  </data>
+  <data name="Reminder.Preset.0" xml:space="preserve">
+    <value>La termen</value>
+  </data>
+  <data name="Reminder.Preset.15" xml:space="preserve">
+    <value>Cu 15 min înainte</value>
+  </data>
+  <data name="Reminder.Preset.30" xml:space="preserve">
+    <value>Cu 30 min înainte</value>
+  </data>
+  <data name="Reminder.Preset.60" xml:space="preserve">
+    <value>Cu o oră înainte</value>
+  </data>
+  <data name="Reminder.Preset.120" xml:space="preserve">
+    <value>Cu 2 ore înainte</value>
+  </data>
+  <data name="Reminder.Preset.1440" xml:space="preserve">
+    <value>Cu o zi înainte</value>
+  </data>
+  <data name="Reminder.MinutesBefore" xml:space="preserve">
+    <value>Cu {0} min înainte de termen</value>
+  </data>
+  <data name="Reminder.Snooze.5" xml:space="preserve">
+    <value>5 min</value>
+  </data>
+  <data name="Reminder.Snooze.10" xml:space="preserve">
+    <value>10 min</value>
+  </data>
+  <data name="Reminder.Snooze.15" xml:space="preserve">
+    <value>15 min</value>
+  </data>
+  <data name="Reminder.Snooze.30" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="Reminder.Snooze.60" xml:space="preserve">
+    <value>1 oră</value>
+  </data>
+  <data name="Reminder.Snooze.tomorrow" xml:space="preserve">
+    <value>Mâine la 09:00</value>
+  </data>
+  <data name="Reminder.Toast.Due" xml:space="preserve">
+    <value>Termen: {0}</value>
+  </data>
+  <data name="Reminder.Next" xml:space="preserve">
+    <value>Următorul: {0}</value>
+  </data>
+  <data name="Reminder.NeedsDue" xml:space="preserve">
+    <value>Are nevoie de un termen</value>
+  </data>
+  <data name="Reminder.Passed" xml:space="preserve">
+    <value>A trecut deja</value>
+  </data>
+  <data name="Reminder.Inactive" xml:space="preserve">
+    <value>Inactiv cât timp taskul e închis</value>
+  </data>
+  <data name="Details.Reminders" xml:space="preserve">
+    <value>Remindere</value>
+  </data>
+  <data name="Details.AddReminder" xml:space="preserve">
+    <value>Adaugă un reminder</value>
+  </data>
+  <data name="Details.ReminderAt" xml:space="preserve">
+    <value>Sau la o dată și oră</value>
+  </data>
+  <data name="Details.ReminderDate" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Details.ReminderTime" xml:space="preserve">
+    <value>Ora</value>
+  </data>
+  <data name="Details.AddReminderButton" xml:space="preserve">
+    <value>Adaugă</value>
+  </data>
+  <data name="Details.RemoveReminder" xml:space="preserve">
+    <value>Șterge reminderul</value>
+  </data>
+  <data name="Notifications.Reminder" xml:space="preserve">
+    <value>Reminder</value>
+  </data>
+  <data name="Notifications.Missed" xml:space="preserve">
+    <value>Remindere ratate: {0}</value>
+  </data>
+  <data name="Notifications.MissedHint" xml:space="preserve">
+    <value>Au venit cât timp aplicația nu rula.</value>
+  </data>
+  <data name="Notifications.Open" xml:space="preserve">
+    <value>Deschide taskul</value>
+  </data>
+  <data name="Notifications.Done" xml:space="preserve">
+    <value>Finalizat</value>
+  </data>
+  <data name="Notifications.Snooze" xml:space="preserve">
+    <value>Amână</value>
+  </data>
+  <data name="Notifications.Dismiss" xml:space="preserve">
+    <value>Închide</value>
+  </data>
+  <data name="Notifications.MarkAllRead" xml:space="preserve">
+    <value>Marchează toate ca citite</value>
+  </data>
+  <data name="Notifications.List" xml:space="preserve">
+    <value>Notificări</value>
+  </data>
+  <data name="Notifications.Unread" xml:space="preserve">
+    <value>{0} necitite</value>
+  </data>
+  <data name="Settings.Startup.Header" xml:space="preserve">
+    <value>Pornire</value>
+  </data>
+  <data name="Settings.Startup.Description" xml:space="preserve">
+    <value>Reminderele sunt cele mai sigure când aplicația rulează în tray toată ziua. Cu aplicația închisă, Windows le arată doar cât PC-ul e pornit.</value>
+  </data>
+  <data name="Settings.Startup.Toggle" xml:space="preserve">
+    <value>Pornește odată cu Windows, în tray</value>
+  </data>
+  <data name="Calendar.View.Month" xml:space="preserve">
+    <value>Lună</value>
+  </data>
+  <data name="Calendar.View.Agenda" xml:space="preserve">
+    <value>Agendă</value>
+  </data>
+  <data name="Calendar.Views" xml:space="preserve">
+    <value>Vederi calendar</value>
+  </data>
+  <data name="Calendar.Today" xml:space="preserve">
+    <value>Azi</value>
+  </data>
+  <data name="Calendar.Previous" xml:space="preserve">
+    <value>Înapoi</value>
+  </data>
+  <data name="Calendar.Next" xml:space="preserve">
+    <value>Înainte</value>
+  </data>
+  <data name="Calendar.More" xml:space="preserve">
+    <value>încă {0}</value>
+  </data>
+  <data name="Calendar.TaskCount" xml:space="preserve">
+    <value>taskuri: {0}</value>
+  </data>
+  <data name="Calendar.Grid" xml:space="preserve">
+    <value>Luna</value>
+  </data>
+  <data name="Calendar.Move.Question" xml:space="preserve">
+    <value>Muți „{0}” de pe {1} pe {2}?</value>
+  </data>
+  <data name="Calendar.Move.NoDue" xml:space="preserve">
+    <value>fără termen</value>
+  </data>
+  <data name="Calendar.Move.Confirm" xml:space="preserve">
+    <value>Mută</value>
+  </data>
+  <data name="Calendar.Move.Hint" xml:space="preserve">
+    <value>Trage un task pe altă zi ca să-i schimbi termenul.</value>
+  </data>
+  <data name="Calendar.Agenda.Empty" xml:space="preserve">
+    <value>Nimic cu termen în următoarele 30 de zile.</value>
+  </data>
+  <data name="Holiday.NewYear" xml:space="preserve">
+    <value>Anul Nou</value>
+  </data>
+  <data name="Holiday.NewYear2" xml:space="preserve">
+    <value>Anul Nou (a doua zi)</value>
+  </data>
+  <data name="Holiday.Epiphany" xml:space="preserve">
+    <value>Boboteaza</value>
+  </data>
+  <data name="Holiday.StJohn" xml:space="preserve">
+    <value>Sf. Ioan</value>
+  </data>
+  <data name="Holiday.Union" xml:space="preserve">
+    <value>Ziua Unirii</value>
+  </data>
+  <data name="Holiday.GoodFriday" xml:space="preserve">
+    <value>Vinerea Mare</value>
+  </data>
+  <data name="Holiday.Easter" xml:space="preserve">
+    <value>Paște</value>
+  </data>
+  <data name="Holiday.EasterMonday" xml:space="preserve">
+    <value>A doua zi de Paște</value>
+  </data>
+  <data name="Holiday.LabourDay" xml:space="preserve">
+    <value>Ziua Muncii</value>
+  </data>
+  <data name="Holiday.ChildrensDay" xml:space="preserve">
+    <value>Ziua Copilului</value>
+  </data>
+  <data name="Holiday.Pentecost" xml:space="preserve">
+    <value>Rusalii</value>
+  </data>
+  <data name="Holiday.PentecostMonday" xml:space="preserve">
+    <value>A doua zi de Rusalii</value>
+  </data>
+  <data name="Holiday.Assumption" xml:space="preserve">
+    <value>Adormirea Maicii Domnului</value>
+  </data>
+  <data name="Holiday.StAndrew" xml:space="preserve">
+    <value>Sf. Andrei</value>
+  </data>
+  <data name="Holiday.NationalDay" xml:space="preserve">
+    <value>Ziua Națională</value>
+  </data>
+  <data name="Holiday.Christmas" xml:space="preserve">
+    <value>Crăciunul</value>
+  </data>
+  <data name="Holiday.Christmas2" xml:space="preserve">
+    <value>Crăciunul (a doua zi)</value>
+  </data>
+  <data name="Calendar.View.Week" xml:space="preserve">
+    <value>Săptămână</value>
+  </data>
+  <data name="Calendar.View.Day" xml:space="preserve">
+    <value>Zi</value>
+  </data>
+  <data name="Calendar.WorkingHours" xml:space="preserve">
+    <value>Program {0}–{1}</value>
+  </data>
+  <data name="Calendar.OpenDay" xml:space="preserve">
+    <value>Deschide ziua</value>
+  </data>
+  <data name="Settings.Schedule.Header" xml:space="preserve">
+    <value>Program și ore de liniște</value>
+  </data>
+  <data name="Settings.Schedule.Description" xml:space="preserve">
+    <value>Calendarul îți arată programul. În orele de liniște reminderele așteaptă și vin când se termină; termenele nu se schimbă.</value>
+  </data>
+  <data name="Settings.WorkStart" xml:space="preserve">
+    <value>Începe programul</value>
+  </data>
+  <data name="Settings.WorkEnd" xml:space="preserve">
+    <value>Se termină programul</value>
+  </data>
+  <data name="Settings.Quiet.Toggle" xml:space="preserve">
+    <value>Ore de liniște pentru remindere</value>
+  </data>
+  <data name="Settings.QuietStart" xml:space="preserve">
+    <value>De la</value>
+  </data>
+  <data name="Settings.QuietEnd" xml:space="preserve">
+    <value>Până la</value>
+  </data>
+  <data name="Settings.Quiet.Weekends" xml:space="preserve">
+    <value>Liniște tot weekendul</value>
+  </data>
+  <data name="Settings.Mode.Header" xml:space="preserve">
+    <value>Mod de lucru</value>
+  </data>
+  <data name="Settings.Mode.Description" xml:space="preserve">
+    <value>Simplu arată doar esențialul; Avansat adaugă workflow-uri, proiecte, analiză și arhivă. Datele rămân aceleași.</value>
+  </data>
+  <data name="Settings.Mode" xml:space="preserve">
+    <value>Mod</value>
+  </data>
+  <data name="Mode.Simple" xml:space="preserve">
+    <value>Simplu</value>
+  </data>
+  <data name="Mode.Advanced" xml:space="preserve">
+    <value>Avansat</value>
+  </data>
+  <data name="Settings.Mode.Simple.Description" xml:space="preserve">
+    <value>Ziua mea, taskuri, calendar și remindere. Proiectul și referințele deja completate rămân vizibile, doar pentru citire.</value>
+  </data>
+  <data name="Settings.Mode.Advanced.Description" xml:space="preserve">
+    <value>Toate secțiunile și toate câmpurile taskului.</value>
+  </data>
+  <data name="Settings.DateFormat" xml:space="preserve">
+    <value>Format dată</value>
+  </data>
+  <data name="Settings.DateFormat.System" xml:space="preserve">
+    <value>Ca în Windows ({0})</value>
+  </data>
+  <data name="Command.Mode.ToAdvanced" xml:space="preserve">
+    <value>Treci la modul Avansat</value>
+  </data>
+  <data name="Command.Mode.ToSimple" xml:space="preserve">
+    <value>Treci la modul Simplu</value>
+  </data>
+  <data name="Onboarding.Progress" xml:space="preserve">
+    <value>Pasul {0} din {1}</value>
+  </data>
+  <data name="Onboarding.Next" xml:space="preserve">
+    <value>Continuă</value>
+  </data>
+  <data name="Onboarding.Finish" xml:space="preserve">
+    <value>Deschide Finance OS</value>
+  </data>
+  <data name="Onboarding.Back" xml:space="preserve">
+    <value>Înapoi</value>
+  </data>
+  <data name="Onboarding.Skip" xml:space="preserve">
+    <value>Sari peste</value>
+  </data>
+  <data name="Onboarding.Welcome.Title" xml:space="preserve">
+    <value>Bun venit în Finance OS</value>
+  </data>
+  <data name="Onboarding.Welcome.Description" xml:space="preserve">
+    <value>Taskuri, termene și remindere pentru munca de zi cu zi, păstrate pe acest calculator. Configurarea durează un minut și orice alegere se poate schimba apoi din Setări.</value>
+  </data>
+  <data name="Onboarding.Mode.Title" xml:space="preserve">
+    <value>Cât de mult îți trebuie?</value>
+  </data>
+  <data name="Onboarding.Mode.Description" xml:space="preserve">
+    <value>Poți schimba oricând; taskurile rămân aceleași.</value>
+  </data>
+  <data name="Onboarding.Mode.Simple.Description" xml:space="preserve">
+    <value>Taskurile de azi, termene, remindere și calendar. Clar într-un minut.</value>
+  </data>
+  <data name="Onboarding.Mode.Advanced.Description" xml:space="preserve">
+    <value>Adaugă workflow-uri, proiecte, analiză, arhivă și toate câmpurile taskului.</value>
+  </data>
+  <data name="Onboarding.Theme.Title" xml:space="preserve">
+    <value>Luminos sau întunecat?</value>
+  </data>
+  <data name="Onboarding.Theme.Description" xml:space="preserve">
+    <value>„Ca Windows” urmează setarea sistemului. Poți alege și o culoare de accent.</value>
+  </data>
+  <data name="Onboarding.Hours.Title" xml:space="preserve">
+    <value>Programul tău</value>
+  </data>
+  <data name="Onboarding.Hours.Description" xml:space="preserve">
+    <value>Calendarul le evidențiază în vederea pe zi.</value>
+  </data>
+  <data name="Onboarding.Notifications.Title" xml:space="preserve">
+    <value>Remindere</value>
+  </data>
+  <data name="Onboarding.Notifications.Description" xml:space="preserve">
+    <value>Reminderele apar ca notificări Windows, chiar și cu aplicația închisă. În orele de liniște așteaptă până se termină.</value>
+  </data>
+  <data name="Onboarding.Demo" xml:space="preserve">
+    <value>Adaugă câteva taskuri exemplu ca să explorezi (marcate ca exemplu, se șterg cu un click din Setări)</value>
+  </data>
+  <data name="Toast.DemoAdded.Title" xml:space="preserve">
+    <value>Am adăugat taskuri exemplu</value>
+  </data>
+  <data name="Toast.DemoAdded.Body" xml:space="preserve">
+    <value>{0} taskuri exemplu. Le ștergi din Setări → Date exemplu.</value>
+  </data>
+  <data name="Settings.Demo.Header" xml:space="preserve">
+    <value>Date exemplu</value>
+  </data>
+  <data name="Settings.Demo.Description" xml:space="preserve">
+    <value>Taskurile exemplu din ghidul de pornire, cu categoriile, proiectul și eticheta lor. Taskurile tale rămân; unul care folosea un nume exemplu doar pierde legătura.</value>
+  </data>
+  <data name="Settings.Demo.Remove" xml:space="preserve">
+    <value>Șterge datele exemplu</value>
+  </data>
+  <data name="Action.demo.remove" xml:space="preserve">
+    <value>Ștergerea datelor exemplu</value>
+  </data>
+  <data name="Demo.Category.Close" xml:space="preserve">
+    <value>Închidere de lună</value>
+  </data>
+  <data name="Demo.Category.Tax" xml:space="preserve">
+    <value>Taxe</value>
+  </data>
+  <data name="Demo.Project.Audit" xml:space="preserve">
+    <value>Audit anual</value>
+  </data>
+  <data name="Demo.Tag.Urgent" xml:space="preserve">
+    <value>urgent</value>
+  </data>
+  <data name="Demo.Close.Title" xml:space="preserve">
+    <value>Închiderea contabilă a lunii</value>
+  </data>
+  <data name="Demo.Close.Description" xml:space="preserve">
+    <value>Înregistrează provizioanele, reconciliază băncile și trimite raportul flash.</value>
+  </data>
+  <data name="Demo.Close.Item1" xml:space="preserve">
+    <value>Provizioane înregistrate</value>
+  </data>
+  <data name="Demo.Close.Item2" xml:space="preserve">
+    <value>Amortizarea mijloacelor fixe</value>
+  </data>
+  <data name="Demo.Close.Item3" xml:space="preserve">
+    <value>Analiza variațiilor din P&amp;L</value>
+  </data>
+  <data name="Demo.Bank.Title" xml:space="preserve">
+    <value>Reconcilierile bancare</value>
+  </data>
+  <data name="Demo.Vat.Title" xml:space="preserve">
+    <value>Plata TVA</value>
+  </data>
+  <data name="Demo.Expenses.Title" xml:space="preserve">
+    <value>Trimite decontul de cheltuieli</value>
+  </data>
+  <data name="Demo.Audit.Title" xml:space="preserve">
+    <value>Răspunde la întrebările auditorului</value>
+  </data>
+  <data name="Demo.Audit.Requester" xml:space="preserve">
+    <value>Echipa de audit</value>
+  </data>
+  <data name="Demo.Budget.Title" xml:space="preserve">
+    <value>Actualizează bugetul pentru T1</value>
+  </data>
+  <data name="Tasks.Row.Demo" xml:space="preserve">
+    <value>Exemplu</value>
+  </data>
+  <data name="Settings.About.Copyright" xml:space="preserve">
+    <value>© {0} {1}. Toate drepturile rezervate.</value>
+  </data>
+</root>

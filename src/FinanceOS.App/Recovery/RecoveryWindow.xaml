@@ -1,0 +1,152 @@
+﻿<Window x:Class="FinanceOS.App.Recovery.RecoveryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:FinanceOS.UI.Controls;assembly=FinanceOS.UI"
+        xmlns:recovery="clr-namespace:FinanceOS.App.Recovery"
+        xmlns:loc="clr-namespace:FinanceOS.UI.Localization;assembly=FinanceOS.UI"
+        Title="{loc:Tr Recovery.WindowTitle}"
+        Width="680" SizeToContent="Height" MinHeight="360" ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource Brush.Background}"
+        FontFamily="{StaticResource Font.Sans}"
+        UseLayoutRounding="True"
+        TextOptions.TextFormattingMode="Ideal">
+    <!--
+      Shown instead of the main window when the database cannot be used. Standard window chrome on purpose:
+      this screen must work even if something about the custom shell is what broke.
+    -->
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+
+        <Style x:Key="BackupRow" TargetType="ListBoxItem" BasedOn="{StaticResource ListRow.Base}">
+            <Setter Property="Padding" Value="12,8" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border x:Name="Row" Background="Transparent" CornerRadius="{StaticResource Radius.Medium}"
+                                BorderThickness="1" BorderBrush="Transparent" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Row" Property="Background" Value="{DynamicResource Brush.SurfaceHover}" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Row" Property="Background" Value="{DynamicResource Brush.SurfacePressed}" />
+                                <Setter TargetName="Row" Property="BorderBrush" Value="{DynamicResource Brush.Accent}" />
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                <Setter TargetName="Row" Property="BorderBrush" Value="{DynamicResource Brush.FocusRing}" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="{DynamicResource Brush.TextTertiary}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="IsEnabled" Value="{Binding IsUsable}" />
+            <Setter Property="AutomationProperties.Name" Value="{Binding When}" />
+        </Style>
+    </Window.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Focusable="False">
+        <StackPanel Margin="32,28,32,24">
+            <StackPanel Orientation="Horizontal">
+                <Border Width="40" Height="40" CornerRadius="20" Background="{DynamicResource Brush.WarningSubtle}">
+                    <ui:Icon Data="{StaticResource Icon.TriangleAlert}" Size="20" Foreground="{DynamicResource Brush.WarningText}" />
+                </Border>
+                <TextBlock Style="{StaticResource Text.Title}" Margin="14,0,0,0" VerticalAlignment="Center" TextWrapping="Wrap"
+                           MaxWidth="540" Text="{Binding Title}" />
+            </StackPanel>
+
+            <TextBlock Style="{StaticResource Text.Body}" Margin="0,16,0,0" TextWrapping="Wrap" Text="{Binding Message}" />
+
+            <!-- Backups (not offered when the data is newer than the app). -->
+            <ui:Card Header="{loc:Tr Recovery.Backups.Header}" Margin="0,20,0,0"
+                     Description="{loc:Tr Recovery.Backups.Description}"
+                     Visibility="{Binding CanRestore, Converter={StaticResource BoolToVisibility}}">
+                <StackPanel>
+                    <ListBox ItemsSource="{Binding Backups}" SelectedItem="{Binding SelectedBackup}" MaxHeight="232"
+                             BorderThickness="0" Background="Transparent" ItemContainerStyle="{StaticResource BackupRow}"
+                             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                             AutomationProperties.Name="{loc:Tr Recovery.Backups.Header}"
+                             Visibility="{Binding HasNoBackups, Converter={x:Static recovery:RecoveryWindow.TrueToCollapsed}}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate DataType="{x:Type recovery:BackupRow}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <ui:Icon Data="{StaticResource Icon.Archive}" Size="16" Margin="0,0,12,0" VerticalAlignment="Center"
+                                             Foreground="{DynamicResource Brush.TextSecondary}" />
+                                    <StackPanel Grid.Column="1">
+                                        <TextBlock Style="{StaticResource Text.BodyStrong}" Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ListBoxItem}}" Text="{Binding When}" />
+                                        <TextBlock Style="{StaticResource Text.Caption}" Text="{Binding Detail}" />
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <TextBlock x:Name="NoBackups" Style="{StaticResource Text.Secondary}" TextWrapping="Wrap"
+                               Text="{loc:Tr Recovery.Backups.None}"
+                               Visibility="{Binding HasNoBackups, Converter={StaticResource BoolToVisibility}}" />
+                </StackPanel>
+            </ui:Card>
+
+            <!-- Last resort, only for a damaged file: a separate, quieter action under the backups. -->
+            <Button Style="{StaticResource Button.Ghost}" HorizontalAlignment="Left" Margin="-12,8,0,0"
+                    Command="{Binding AskStartFreshCommand}"
+                    Visibility="{Binding CanStartFresh, Converter={StaticResource BoolToVisibility}}">
+                <StackPanel Orientation="Horizontal">
+                    <ui:Icon Data="{StaticResource Icon.Plus}" Size="16" Margin="0,0,8,0" />
+                    <TextBlock Text="{loc:Tr Recovery.StartFresh.Ask}" />
+                </StackPanel>
+            </Button>
+
+            <!-- "Start fresh" needs a second, explicit confirmation. -->
+            <Border Margin="0,16,0,0" Padding="16" CornerRadius="{StaticResource Radius.Large}"
+                    Background="{DynamicResource Brush.DangerSubtle}"
+                    Visibility="{Binding IsConfirmingStartFresh, Converter={StaticResource BoolToVisibility}}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource Text.BodyStrong}" Foreground="{DynamicResource Brush.DangerText}"
+                               Text="{loc:Tr Recovery.StartFresh.Title}" />
+                    <TextBlock Style="{StaticResource Text.Body}" Margin="0,4,0,12" TextWrapping="Wrap"
+                               Text="{loc:Tr Recovery.StartFresh.Text}" />
+                    <StackPanel Orientation="Horizontal">
+                        <Button Style="{StaticResource Button.Danger}" Content="{loc:Tr Recovery.StartFresh.Confirm}" Command="{Binding ConfirmStartFreshCommand}" />
+                        <Button Style="{StaticResource Button.Ghost}" Margin="8,0,0,0" Content="{loc:Tr Common.Cancel}" Command="{Binding CancelStartFreshCommand}" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <TextBlock Style="{StaticResource Text.Body}" Margin="0,16,0,0" TextWrapping="Wrap" Foreground="{DynamicResource Brush.DangerText}"
+                       Text="{Binding ActionError}" Visibility="{Binding ActionError, Converter={x:Static recovery:RecoveryWindow.NullToCollapsed}}" />
+
+            <TextBlock Style="{StaticResource Text.Caption}" Margin="0,16,0,0" TextWrapping="Wrap">
+                <Run Text="{loc:Tr Recovery.TechnicalDetails}" />
+                <Run FontFamily="{StaticResource Font.Mono}" Text="{Binding Details, Mode=OneWay}" />
+            </TextBlock>
+
+            <!-- Actions: safe ones on the left, the main one on the right. -->
+            <DockPanel Margin="0,24,0,0" LastChildFill="False">
+                <Button DockPanel.Dock="Left" Style="{StaticResource Button.Ghost}" Command="{Binding OpenDataFolderCommand}">
+                    <StackPanel Orientation="Horizontal">
+                        <ui:Icon Data="{StaticResource Icon.Folder}" Size="16" Margin="0,0,8,0" />
+                        <TextBlock Text="{loc:Tr Recovery.OpenDataFolder}" />
+                    </StackPanel>
+                </Button>
+
+                <Button DockPanel.Dock="Right" Style="{StaticResource Button.Primary}" Margin="8,0,0,0" Content="{loc:Tr Recovery.Restore}"
+                        Command="{Binding RestoreCommand}" IsDefault="True"
+                        Visibility="{Binding CanRestore, Converter={StaticResource BoolToVisibility}}" />
+                <Button DockPanel.Dock="Right" Style="{StaticResource Button.Secondary}" Margin="8,0,0,0" Content="{loc:Tr Recovery.Retry}"
+                        Command="{Binding RetryCommand}"
+                        Visibility="{Binding CanRetry, Converter={StaticResource BoolToVisibility}}" />
+
+                <Button DockPanel.Dock="Right" Style="{StaticResource Button.Ghost}" Margin="8,0,0,0" Content="{loc:Tr Common.Exit}" Command="{Binding ExitCommand}" IsCancel="True" />
+            </DockPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

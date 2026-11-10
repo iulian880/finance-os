@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FinanceOS.App/FinanceOS.App.csproj" />
+    <Project Path="src/FinanceOS.Core/FinanceOS.Core.csproj" />
+    <Project Path="src/FinanceOS.Data/FinanceOS.Data.csproj" />
+    <Project Path="src/FinanceOS.Integrations/FinanceOS.Integrations.csproj" />
+    <Project Path="src/FinanceOS.Platform.Windows/FinanceOS.Platform.Windows.csproj" />
+    <Project Path="src/FinanceOS.UI/FinanceOS.UI.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FinanceOS.App.Tests/FinanceOS.App.Tests.csproj" />
+    <Project Path="tests/FinanceOS.Architecture.Tests/FinanceOS.Architecture.Tests.csproj" />
+    <Project Path="tests/FinanceOS.Core.Tests/FinanceOS.Core.Tests.csproj" />
+    <Project Path="tests/FinanceOS.Data.Tests/FinanceOS.Data.Tests.csproj" />
+    <Project Path="tests/FinanceOS.UI.Tests/FinanceOS.UI.Tests.csproj" />
+  </Folder>
+</Solution>

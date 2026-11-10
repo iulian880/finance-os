@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Windows integration: toasts, single instance, power/session events, startup registration. Depends only on Core. -->
+  <PropertyGroup>
+    <TargetFramework>$(WindowsTfm)</TargetFramework>
+    <SupportedOSPlatformVersion>$(WindowsMinVersion)</SupportedOSPlatformVersion>
+    <!-- Required by [LibraryImport] source-generated interop (window placement). -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Microsoft.Win32.SystemEvents (sleep/resume, clock change, session unlock) ships in the desktop framework.
+         The WPF profile avoids pulling Windows Forms (~23 MB) into the self-contained publish. -->
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WPF" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinanceOS.Core\FinanceOS.Core.csproj" />
+  </ItemGroup>
+
+</Project>

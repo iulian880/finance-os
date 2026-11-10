@@ -1,0 +1,109 @@
+<!-- Dialog + DialogHost: modal card over a scrim, inside the window. -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ui="clr-namespace:FinanceOS.UI.Controls">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/FinanceOS.UI;component/Themes/Typography.xaml" />
+        <ResourceDictionary Source="/FinanceOS.UI;component/Themes/Controls/Button.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="ui:Dialog">
+        <!-- Body text in the dialog content (strings and TextBlocks added by code): secondary color, wrapping.
+             Style.Resources is on the logical path of content elements; template resources are not. -->
+        <Style.Resources>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource Text.Secondary}">
+                <Setter Property="TextWrapping" Value="Wrap" />
+                <Setter Property="TextTrimming" Value="None" />
+            </Style>
+        </Style.Resources>
+        <Setter Property="FontFamily" Value="{StaticResource Font.Sans}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSize.Body}" />
+        <Setter Property="Foreground" Value="{DynamicResource Brush.TextPrimary}" />
+        <Setter Property="Background" Value="{DynamicResource Brush.SurfaceRaised}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Border}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="24" />
+        <Setter Property="Margin" Value="24" />
+        <Setter Property="MinWidth" Value="360" />
+        <Setter Property="MaxWidth" Value="520" />
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="Cycle" />
+        <Setter Property="KeyboardNavigation.ControlTabNavigation" Value="Cycle" />
+        <Setter Property="KeyboardNavigation.DirectionalNavigation" Value="Contained" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ui:Dialog">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource Radius.XLarge}"
+                            Padding="{TemplateBinding Padding}" Effect="{DynamicResource Effect.Elevation3}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock x:Name="TitleText" Style="{StaticResource Text.Title}" TextWrapping="Wrap" Margin="0,0,0,8"
+                                       Text="{TemplateBinding Title}" />
+                            <!-- Plain-string content becomes a TextBlock generated inside this template, which does not
+                                 see Style.Resources above; it needs the same style here. -->
+                            <ContentPresenter Grid.Row="1">
+                                <ContentPresenter.Resources>
+                                    <Style TargetType="TextBlock" BasedOn="{StaticResource Text.Secondary}">
+                                        <Setter Property="TextWrapping" Value="Wrap" />
+                                        <Setter Property="TextTrimming" Value="None" />
+                                    </Style>
+                                </ContentPresenter.Resources>
+                            </ContentPresenter>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,24,0,0">
+                                <Button x:Name="PART_SecondaryButton" Style="{StaticResource Button.Secondary}" Margin="0,0,8,0"
+                                        Content="{TemplateBinding SecondaryButtonText}" />
+                                <Button x:Name="PART_PrimaryButton" Style="{StaticResource Button.Primary}" IsDefault="True"
+                                        Content="{TemplateBinding PrimaryButtonText}" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Title" Value="{x:Null}">
+                            <Setter TargetName="TitleText" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="SecondaryButtonText" Value="{x:Null}">
+                            <Setter TargetName="PART_SecondaryButton" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="PrimaryButtonText" Value="{x:Null}">
+                            <Setter TargetName="PART_PrimaryButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="PART_SecondaryButton" Property="Margin" Value="0" />
+                        </Trigger>
+                        <!-- Destructive: red button, and Enter must not trigger it. -->
+                        <Trigger Property="IsPrimaryDestructive" Value="True">
+                            <Setter TargetName="PART_PrimaryButton" Property="Style" Value="{StaticResource Button.Danger}" />
+                            <Setter TargetName="PART_PrimaryButton" Property="IsDefault" Value="False" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="ui:DialogHost">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ui:DialogHost">
+                    <Grid>
+                        <ContentPresenter x:Name="PageContent" />
+                        <Border x:Name="PART_Scrim" Background="{DynamicResource Brush.Overlay}" Visibility="Collapsed" />
+                        <ContentPresenter x:Name="PART_DialogPresenter" Content="{TemplateBinding CurrentDialog}"
+                                          HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDialogOpen" Value="True">
+                            <Setter TargetName="PART_Scrim" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="PART_DialogPresenter" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="PageContent" Property="IsHitTestVisible" Value="False" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

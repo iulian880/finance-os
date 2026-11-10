@@ -1,0 +1,374 @@
+<Window x:Class="FinanceOS.App.Dev.ComponentGalleryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+        xmlns:ui="clr-namespace:FinanceOS.UI.Controls;assembly=FinanceOS.UI"
+        Title="Finance OS — Componente"
+        Width="1180" Height="900" MinWidth="720" MinHeight="480"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource Brush.Background}"
+        FontFamily="{StaticResource Font.Sans}"
+        UseLayoutRounding="True"
+        TextOptions.TextFormattingMode="Ideal">
+    <!-- Developer page (Debug builds only): every M2 control in all its states, live in the current theme. -->
+    <Window.Resources>
+        <Style x:Key="Section" TargetType="TextBlock" BasedOn="{StaticResource Text.Title}">
+            <Setter Property="Margin" Value="0,40,0,4" />
+        </Style>
+        <Style x:Key="SectionNote" TargetType="TextBlock" BasedOn="{StaticResource Text.Secondary}">
+            <Setter Property="Margin" Value="0,0,0,16" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+        <Style x:Key="Card" TargetType="Border">
+            <Setter Property="Padding" Value="24" />
+            <Setter Property="CornerRadius" Value="{StaticResource Radius.Large}" />
+            <Setter Property="Background" Value="{DynamicResource Brush.Surface}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Brush.Border}" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+        <Style x:Key="RowLabel" TargetType="TextBlock" BasedOn="{StaticResource Text.Caption}">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0,0,16,12" />
+        </Style>
+        <x:Array x:Key="Categories" Type="sys:String">
+            <sys:String>Intercompany</sys:String>
+            <sys:String>Închidere de lună</sys:String>
+            <sys:String>Facturi furnizori</sys:String>
+            <sys:String>Raportare</sys:String>
+            <sys:String>Trezorerie</sys:String>
+        </x:Array>
+    </Window.Resources>
+
+    <!-- Window root: page inside the dialog host, toasts and command palette layered above it (as in the real shell, M4). -->
+    <Grid x:Name="Root">
+    <ui:DialogHost x:Name="Dialogs">
+    <!-- Horizontal scrolling disabled: the page is measured at the window width, so text wraps instead of clipping. -->
+    <ScrollViewer x:Name="Scroller" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Focusable="False">
+        <StackPanel x:Name="Page" Margin="{StaticResource Padding.Page}" MaxWidth="1100" HorizontalAlignment="Left">
+            <StackPanel.Resources>
+                <!-- Uniform width and spacing for the field samples (applies to the implicit field styles). -->
+                <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                    <Setter Property="Width" Value="248" />
+                    <Setter Property="Margin" Value="0,0,24,24" />
+                    <Setter Property="VerticalAlignment" Value="Top" />
+                </Style>
+                <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}">
+                    <Setter Property="Width" Value="248" />
+                    <Setter Property="Margin" Value="0,0,24,24" />
+                    <Setter Property="VerticalAlignment" Value="Top" />
+                </Style>
+                <Style TargetType="DatePicker" BasedOn="{StaticResource {x:Type DatePicker}}">
+                    <Setter Property="Width" Value="248" />
+                    <Setter Property="Margin" Value="0,0,24,24" />
+                    <Setter Property="VerticalAlignment" Value="Top" />
+                </Style>
+                <Style TargetType="ui:TimePicker" BasedOn="{StaticResource {x:Type ui:TimePicker}}">
+                    <Setter Property="Width" Value="248" />
+                    <Setter Property="Margin" Value="0,0,24,24" />
+                    <Setter Property="VerticalAlignment" Value="Top" />
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock Style="{StaticResource Text.Overline}" Text="Finance OS · Design system · M2" />
+            <TextBlock Style="{StaticResource Text.Display}" Text="Controale de bază" Margin="0,4,0,4" />
+            <TextBlock Style="{StaticResource Text.Secondary}" TextWrapping="Wrap"
+                       Text="Toate stările fiecărui control, în tema curentă. Apasă Tab ca să vezi inelul de focus; treci cu mouse-ul pentru hover și tooltip." />
+
+            <!-- Theme + accent: the page's own controls are the ones under test. -->
+            <Border Style="{StaticResource Card}" Margin="0,24,0,0">
+                <WrapPanel>
+                    <ComboBox x:Name="ThemePicker" Width="200" Margin="0,0,24,0" ui:FieldAssist.Header="Temă"
+                              SelectionChanged="OnThemePicked" AutomationProperties.AutomationId="Gallery.Theme" />
+                    <ComboBox x:Name="AccentPicker" Width="200" Margin="0,0,24,0" ui:FieldAssist.Header="Accent" DisplayMemberPath="Name"
+                              SelectionChanged="OnAccentPicked" AutomationProperties.AutomationId="Gallery.Accent" />
+                    <TextBlock x:Name="StateText" Style="{StaticResource Text.Caption}" VerticalAlignment="Bottom" Margin="0,0,0,8" />
+                </WrapPanel>
+            </Border>
+
+            <!-- Buttons -->
+            <TextBlock Style="{StaticResource Section}" Text="Button" />
+            <TextBlock Style="{StaticResource SectionNote}"
+                       Text="Primary pentru acțiunea principală a unui ecran (una singură), Secondary implicit, Ghost în bare de unelte, Danger doar pentru acțiuni distructive." />
+            <Border Style="{StaticResource Card}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="1" Style="{StaticResource Text.Caption}" Text="Normal" Margin="0,0,0,12" />
+                    <TextBlock Grid.Column="2" Style="{StaticResource Text.Caption}" Text="Cu icon" Margin="0,0,0,12" />
+                    <TextBlock Grid.Column="3" Style="{StaticResource Text.Caption}" Text="Dezactivat" Margin="0,0,0,12" />
+
+                    <TextBlock Grid.Row="1" Style="{StaticResource RowLabel}" Text="Primary" />
+                    <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource Button.Primary}" Content="Marchează gata" Margin="0,0,16,12" HorizontalAlignment="Left" />
+                    <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource Button.Primary}" Margin="0,0,16,12" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <Viewbox Width="16" Height="16" Margin="0,0,8,0">
+                                <Path Style="{StaticResource Glyph.Path}" Data="{StaticResource Icon.Check}"
+                                      Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" />
+                            </Viewbox>
+                            <TextBlock Text="Salvează" />
+                        </StackPanel>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="3" Style="{StaticResource Button.Primary}" Content="Marchează gata" IsEnabled="False" Margin="0,0,16,12" HorizontalAlignment="Left" />
+
+                    <TextBlock Grid.Row="2" Style="{StaticResource RowLabel}" Text="Secondary" />
+                    <Button Grid.Row="2" Grid.Column="1" Content="Amână" Margin="0,0,16,12" HorizontalAlignment="Left" />
+                    <Button Grid.Row="2" Grid.Column="2" Margin="0,0,16,12" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <Viewbox Width="16" Height="16" Margin="0,0,8,0">
+                                <Path Style="{StaticResource Glyph.Path}" Data="{StaticResource Icon.Calendar}" Stroke="{DynamicResource Brush.TextSecondary}" />
+                            </Viewbox>
+                            <TextBlock Text="Reprogramează" />
+                        </StackPanel>
+                    </Button>
+                    <Button Grid.Row="2" Grid.Column="3" Content="Amână" IsEnabled="False" Margin="0,0,16,12" HorizontalAlignment="Left" />
+
+                    <TextBlock Grid.Row="3" Style="{StaticResource RowLabel}" Text="Ghost" />
+                    <Button Grid.Row="3" Grid.Column="1" Style="{StaticResource Button.Ghost}" Content="Anulează" Margin="0,0,16,12" HorizontalAlignment="Left" />
+                    <Button Grid.Row="3" Grid.Column="2" Style="{StaticResource Button.Icon}" Margin="0,0,16,12" HorizontalAlignment="Left"
+                            AutomationProperties.Name="Setează ora" ToolTip="Setează ora reminderului">
+                        <Viewbox Width="16" Height="16">
+                            <Path Style="{StaticResource Glyph.Path}" Data="{StaticResource Icon.Clock}"
+                                  Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" />
+                        </Viewbox>
+                    </Button>
+                    <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource Button.Ghost}" Content="Anulează" IsEnabled="False" Margin="0,0,16,12" HorizontalAlignment="Left" />
+
+                    <TextBlock Grid.Row="4" Style="{StaticResource RowLabel}" Text="Danger" />
+                    <Button Grid.Row="4" Grid.Column="1" Style="{StaticResource Button.Danger}" Content="Șterge taskul" Margin="0,0,16,12" HorizontalAlignment="Left" />
+                    <Button Grid.Row="4" Grid.Column="3" Style="{StaticResource Button.Danger}" Content="Șterge taskul" IsEnabled="False" Margin="0,0,16,12" HorizontalAlignment="Left" />
+
+                    <TextBlock Grid.Row="5" Style="{StaticResource RowLabel}" Text="Tooltip" />
+                    <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Content="Treci cu mouse-ul aici"
+                            ToolTip="Tooltip-urile adaugă detalii, nu informații esențiale. Textul lung trece pe rândul următor la 320 px." />
+                </Grid>
+            </Border>
+
+            <!-- Text fields -->
+            <TextBlock Style="{StaticResource Section}" Text="TextField" />
+            <TextBlock Style="{StaticResource SectionNote}"
+                       Text="Eticheta, placeholder-ul, textul ajutător și eroarea vin din ui:FieldAssist. Eticheta devine automat numele accesibil al câmpului." />
+            <Border Style="{StaticResource Card}">
+                <WrapPanel>
+                    <TextBox ui:FieldAssist.Header="Titlu" ui:FieldAssist.Placeholder="Ex.: Reconciliere bancară BT" />
+                    <TextBox ui:FieldAssist.Header="Solicitant" Text="Andreea Popescu"
+                             ui:FieldAssist.HelperText="Persoana de la care aștepți răspuns." />
+                    <TextBox ui:FieldAssist.Header="Sumă" Text="12.400,5x"
+                             ui:FieldAssist.ErrorText="Introdu o sumă validă, de ex. 12.400,50." />
+                    <TextBox ui:FieldAssist.Header="Cod proiect" Text="FIN-2026-11" IsEnabled="False" />
+                    <TextBox ui:FieldAssist.Header="Creat de" Text="Import CSV · 04.11.2026" IsReadOnly="True"
+                             ui:FieldAssist.HelperText="Doar citire." />
+                    <TextBox Width="520" Style="{StaticResource TextBox.Multiline}"
+                             ui:FieldAssist.Header="Note" ui:FieldAssist.Placeholder="Context, pași, linkuri către documente…" />
+                </WrapPanel>
+            </Border>
+
+            <!-- Select -->
+            <TextBlock Style="{StaticResource Section}" Text="Select" />
+            <TextBlock Style="{StaticResource SectionNote}" Text="Lista se deschide cu click, Alt+↓ sau F4; săgețile mută selecția; tastarea unei litere sare la opțiune." />
+            <Border Style="{StaticResource Card}">
+                <WrapPanel>
+                    <ComboBox ui:FieldAssist.Header="Categorie" ui:FieldAssist.Placeholder="Alege o categorie"
+                              ItemsSource="{StaticResource Categories}" />
+                    <ComboBox x:Name="SampleSelect" ui:FieldAssist.Header="Prioritate" SelectedIndex="1"
+                              ui:FieldAssist.HelperText="Prioritatea apare în My Day.">
+                        <ComboBoxItem Content="Scăzută" />
+                        <ComboBoxItem Content="Normală" />
+                        <ComboBoxItem Content="Ridicată" />
+                        <ComboBoxItem Content="Urgentă" />
+                    </ComboBox>
+                    <ComboBox ui:FieldAssist.Header="Proiect" ui:FieldAssist.Placeholder="Alege un proiect"
+                              ItemsSource="{StaticResource Categories}" ui:FieldAssist.ErrorText="Proiectul este obligatoriu." />
+                    <ComboBox ui:FieldAssist.Header="Status" SelectedIndex="0" IsEnabled="False">
+                        <ComboBoxItem Content="În lucru" />
+                    </ComboBox>
+                </WrapPanel>
+            </Border>
+
+            <!-- Date + time -->
+            <TextBlock Style="{StaticResource Section}" Text="DatePicker · TimePicker" />
+            <TextBlock Style="{StaticResource SectionNote}"
+                       Text="Data se poate tasta sau alege din calendar (Alt+↓). Ora acceptă 9, 930, 9:30, 9.30, 14 30, 2pm; ↑/↓ mută ora cu pasul listei (15 min)." />
+            <Border Style="{StaticResource Card}">
+                <StackPanel>
+                    <WrapPanel>
+                        <DatePicker x:Name="SampleDate" ui:FieldAssist.Header="Termen" ui:FieldAssist.Placeholder="Alege o dată" />
+                        <DatePicker x:Name="StartDate" ui:FieldAssist.Header="Început" ui:FieldAssist.HelperText="Implicit: azi." />
+                        <DatePicker x:Name="ArchivedDate" ui:FieldAssist.Header="Arhivat la" IsEnabled="False" />
+                    </WrapPanel>
+                    <WrapPanel>
+                        <ui:TimePicker ui:FieldAssist.Header="Reminder" ui:FieldAssist.Placeholder="hh:mm" />
+                        <ui:TimePicker x:Name="FollowUpTime" ui:FieldAssist.Header="Follow-up la" ui:FieldAssist.HelperText="În orele de lucru." />
+                        <ui:TimePicker x:Name="LockedTime" ui:FieldAssist.Header="Ora fixă" IsEnabled="False" />
+                    </WrapPanel>
+                    <TextBlock Style="{StaticResource Text.Caption}" Text="Calendar (același stil ca în popup-ul DatePicker)" Margin="0,0,0,4" />
+                    <!-- Negative margin cancels the shadow room the calendar reserves for its popup use. -->
+                    <Calendar x:Name="InlineCalendar" HorizontalAlignment="Left" Margin="-12,-4,0,-20" />
+                </StackPanel>
+            </Border>
+
+            <!-- Checkbox + toggle -->
+            <TextBlock Style="{StaticResource Section}" Text="Checkbox · Toggle" />
+            <TextBlock Style="{StaticResource SectionNote}"
+                       Text="Checkbox pentru alegeri într-un formular (se aplică la salvare). Toggle pentru setări care se aplică imediat." />
+            <Border Style="{StaticResource Card}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel HorizontalAlignment="Left">
+                        <CheckBox Content="Include taskurile arhivate" Margin="0,0,0,12" />
+                        <CheckBox Content="Trimite rezumatul zilnic" IsChecked="True" Margin="0,0,0,12" />
+                        <CheckBox Content="Toate subtaskurile (parțial)" IsThreeState="True" IsChecked="{x:Null}" Margin="0,0,0,12" />
+                        <CheckBox Content="Dezactivat, bifat" IsChecked="True" IsEnabled="False" Margin="0,0,0,12" />
+                        <CheckBox Content="Dezactivat, nebifat" IsEnabled="False" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Left">
+                        <CheckBox Style="{StaticResource Toggle}" Content="Pornește odată cu Windows" Margin="0,0,0,12" />
+                        <CheckBox Style="{StaticResource Toggle}" Content="Respectă orele de liniște" IsChecked="True" Margin="0,0,0,12" />
+                        <CheckBox Style="{StaticResource Toggle}" Content="Dezactivat, pornit" IsChecked="True" IsEnabled="False" Margin="0,0,0,12" />
+                        <CheckBox Style="{StaticResource Toggle}" Content="Dezactivat, oprit" IsEnabled="False" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Badges -->
+            <TextBlock Style="{StaticResource Section}" Text="Badge" />
+            <TextBlock Style="{StaticResource SectionNote}" Text="Etichete informative, nu primesc focus. Culoarea nu e niciodată singurul indiciu: textul spune starea." />
+            <Border Style="{StaticResource Card}">
+                <StackPanel>
+                    <WrapPanel Margin="0,0,0,12">
+                        <ui:Badge Content="Neutru" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Accent" Content="Intercompany" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Success" Content="Gata" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Warning" Content="În așteptare · 2 zile" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Danger" Content="Scadent azi" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Info" Content="Recurent" Margin="0,0,8,0" />
+                    </WrapPanel>
+                    <WrapPanel>
+                        <ui:Badge ShowDot="True" Content="Ciornă" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Accent" ShowDot="True" Content="În lucru" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Success" ShowDot="True" Content="Finalizat" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Warning" ShowDot="True" Content="Așteaptă răspuns" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Danger" ShowDot="True" Content="Întârziat" Margin="0,0,8,0" />
+                        <ui:Badge Tone="Info" ShowDot="True" Content="Planificat" Margin="0,0,8,0" />
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- ============================== M3 ============================== -->
+            <TextBlock Style="{StaticResource Text.Overline}" Text="Design system · M3" Margin="0,72,0,0" />
+            <TextBlock Style="{StaticResource Text.Headline}" Text="Componente compuse" Margin="0,4,0,0" />
+
+            <!-- Card, empty state, skeleton -->
+            <TextBlock Style="{StaticResource Section}" Text="Card · EmptyState · Skeleton" />
+            <TextBlock Style="{StaticResource SectionNote}"
+                       Text="Click dreapta pe primul card (sau pe butonul ⋯) pentru meniul contextual. Starea goală spune de ce e gol și ce poți face. Skeleton-ul ține locul conținutului care se încarcă." />
+            <WrapPanel>
+                <ui:Card x:Name="TaskCard" Width="340" Margin="0,0,24,24" VerticalAlignment="Top"
+                         Header="Reconciliere bancară BT" Description="Închidere de lună · noiembrie">
+                    <ui:Card.Actions>
+                        <Button Style="{StaticResource Button.Icon}" AutomationProperties.Name="Mai multe acțiuni" Click="OnCardMenuClick">
+                            <ui:Icon Data="{StaticResource Icon.Ellipsis}" />
+                        </Button>
+                    </ui:Card.Actions>
+                    <ui:Card.ContextMenu>
+                        <ContextMenu x:Name="TaskMenu">
+                            <MenuItem Header="Editează" InputGestureText="Enter">
+                                <MenuItem.Icon><ui:Icon Data="{StaticResource Icon.Pencil}" /></MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Duplică" InputGestureText="Ctrl+D">
+                                <MenuItem.Icon><ui:Icon Data="{StaticResource Icon.Copy}" /></MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Amână">
+                                <MenuItem.Icon><ui:Icon Data="{StaticResource Icon.Clock}" /></MenuItem.Icon>
+                                <MenuItem Header="Peste o oră" />
+                                <MenuItem Header="Mâine dimineață" />
+                                <MenuItem Header="Lunea viitoare" />
+                            </MenuItem>
+                            <MenuItem Header="Fixat în My Day" IsCheckable="True" IsChecked="True" />
+                            <Separator />
+                            <MenuItem Header="Arhivează">
+                                <MenuItem.Icon><ui:Icon Data="{StaticResource Icon.Archive}" /></MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Șterge…" Style="{StaticResource MenuItem.Danger}" InputGestureText="Del" Click="OnDeleteClick">
+                                <MenuItem.Icon><ui:Icon Data="{StaticResource Icon.Trash}" /></MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </ui:Card.ContextMenu>
+                    <StackPanel>
+                        <WrapPanel Margin="0,0,0,12">
+                            <ui:Badge Tone="Danger" ShowDot="True" Content="Scadent azi" Margin="0,0,8,0" />
+                            <ui:Badge Tone="Accent" Content="Trezorerie" />
+                        </WrapPanel>
+                        <TextBlock Style="{StaticResource Text.Secondary}" TextWrapping="Wrap"
+                                   Text="Extrasul din 3 noiembrie are 4 tranzacții nepotrivite. Verifică comisioanele și dobânda." />
+                    </StackPanel>
+                </ui:Card>
+
+                <ui:Card Width="340" Margin="0,0,24,24" VerticalAlignment="Top" Header="Așteaptă răspuns">
+                    <ui:EmptyState Padding="8,12" Icon="{StaticResource Icon.Inbox}" Title="Nimic în așteptare"
+                                   Description="Când marchezi un task „Așteaptă răspuns”, apare aici, cu data la care ai cerut informația.">
+                        <Button Style="{StaticResource Button.Primary}" Content="Task nou…" Click="OnFormDialogClick" />
+                    </ui:EmptyState>
+                </ui:Card>
+
+                <ui:Card Width="340" Margin="0,0,24,24" VerticalAlignment="Top" Header="Se încarcă…">
+                    <StackPanel x:Name="SkeletonRows" />
+                </ui:Card>
+            </WrapPanel>
+
+            <!-- Dialog, toast, command palette -->
+            <TextBlock Style="{StaticResource Section}" Text="Dialog · Toast · Command palette" />
+            <TextBlock Style="{StaticResource SectionNote}"
+                       Text="Dialogul blochează pagina: Tab rămâne în dialog, Esc îl închide. Toast-urile dispar după 5 s, dar nu cât timp ții mouse-ul pe ele. Paleta se deschide și cu Ctrl+K; caută fără diacritice („sedinta” găsește „Ședință”)." />
+            <Border Style="{StaticResource Card}">
+                <StackPanel>
+                    <WrapPanel>
+                        <Button Content="Dialog cu formular" Click="OnFormDialogClick" Margin="0,0,12,12" />
+                        <Button Content="Dialog distructiv" Click="OnDeleteClick" Margin="0,0,12,12" />
+                        <Button Content="Toast: succes" Tag="Success" Click="OnToastClick" Margin="0,0,12,12" />
+                        <Button Content="Toast: cu „Anulează”" Tag="Undo" Click="OnToastClick" Margin="0,0,12,12" />
+                        <Button Content="Toast: avertizare" Tag="Warning" Click="OnToastClick" Margin="0,0,12,12" />
+                        <Button Content="Toast: eroare" Tag="Danger" Click="OnToastClick" Margin="0,0,12,12" />
+                        <Button Style="{StaticResource Button.Primary}" Click="OnPaletteClick" Margin="0,0,12,12">
+                            <StackPanel Orientation="Horizontal">
+                                <ui:Icon Data="{StaticResource Icon.Search}" Margin="0,0,8,0" />
+                                <TextBlock Text="Command palette" Margin="0,0,10,0" />
+                                <TextBlock Text="Ctrl+K" Opacity="0.8" FontWeight="Normal" />
+                            </StackPanel>
+                        </Button>
+                    </WrapPanel>
+                    <TextBlock x:Name="LastResult" Style="{StaticResource Text.Caption}" Text="Ultima acțiune: —" />
+                </StackPanel>
+            </Border>
+
+            <!-- Icons -->
+            <TextBlock Style="{StaticResource Section}" Text="Iconuri (Lucide)" />
+            <TextBlock Style="{StaticResource SectionNote}"
+                       Text="Geometrie vectorială cu linie de 2 unități: aceeași grosime relativă la orice dimensiune și DPI. Culoarea vine din textul din jur." />
+            <Border Style="{StaticResource Card}">
+                <WrapPanel x:Name="IconGrid" />
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+    </ui:DialogHost>
+
+    <ui:ToastHost x:Name="Toasts" />
+    <ui:CommandPalette x:Name="Palette" Placeholder="Caută o comandă sau un task…" EmptyText="Niciun rezultat. Încearcă alt cuvânt." />
+    </Grid>
+</Window>

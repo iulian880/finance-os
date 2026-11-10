@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(WindowsTfm)</TargetFramework>
+    <SupportedOSPlatformVersion>$(WindowsMinVersion)</SupportedOSPlatformVersion>
+    <!-- ViewModels reference WPF types (ICommand, design-system theming records). -->
+    <UseWPF>true</UseWPF>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\FinanceOS.App\FinanceOS.App.csproj" />
+    <ProjectReference Include="..\..\src\FinanceOS.Platform.Windows\FinanceOS.Platform.Windows.csproj" />
+    <ProjectReference Include="..\..\src\FinanceOS.UI\FinanceOS.UI.csproj" />
+  </ItemGroup>
+
+</Project>

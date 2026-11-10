@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(WindowsTfm)</TargetFramework>
+    <SupportedOSPlatformVersion>$(WindowsMinVersion)</SupportedOSPlatformVersion>
+    <!-- Needed to load the WPF design-system assembly under test. -->
+    <UseWPF>true</UseWPF>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\FinanceOS.Core\FinanceOS.Core.csproj" />
+    <ProjectReference Include="..\..\src\FinanceOS.Data\FinanceOS.Data.csproj" />
+    <ProjectReference Include="..\..\src\FinanceOS.UI\FinanceOS.UI.csproj" />
+    <ProjectReference Include="..\..\src\FinanceOS.Platform.Windows\FinanceOS.Platform.Windows.csproj" />
+    <ProjectReference Include="..\..\src\FinanceOS.Integrations\FinanceOS.Integrations.csproj" />
+  </ItemGroup>
+
+</Project>

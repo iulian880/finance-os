@@ -1,0 +1,153 @@
+<!-- CommandPalette: Ctrl+K overlay with search and ranked results. -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ui="clr-namespace:FinanceOS.UI.Controls">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/FinanceOS.UI;component/Themes/Typography.xaml" />
+        <ResourceDictionary Source="/FinanceOS.UI;component/Themes/Controls/Base.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Keyboard shortcut chip ("Ctrl+N", "Esc"). -->
+    <Style x:Key="Keycap" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource Brush.SurfaceSunken}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.Border}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="Padding" Value="6,1" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="Keycap.Text" TargetType="TextBlock" BasedOn="{StaticResource Text.Caption}">
+        <Setter Property="FontWeight" Value="Medium" />
+    </Style>
+
+    <Style x:Key="Palette.Item" TargetType="ListBoxItem" BasedOn="{StaticResource ListRow.Base}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Border x:Name="Row" Background="Transparent" CornerRadius="{StaticResource Radius.Medium}" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Row" Property="Background" Value="{DynamicResource Brush.SurfaceHover}" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="Row" Property="Background" Value="{DynamicResource Brush.AccentSubtle}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <DataTemplate x:Key="Palette.ItemTemplate" DataType="{x:Type ui:CommandItem}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <ui:Icon Data="{Binding Icon}" Size="16" Foreground="{DynamicResource Brush.TextSecondary}" HorizontalAlignment="Left" />
+            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                <TextBlock Style="{StaticResource Text.Body}" Text="{Binding Title}" />
+                <TextBlock x:Name="SubtitleText" Style="{StaticResource Text.Caption}" Text="{Binding Subtitle}" />
+            </StackPanel>
+            <TextBlock x:Name="GroupText" Grid.Column="2" Style="{StaticResource Text.Caption}" Margin="12,0,0,0" VerticalAlignment="Center"
+                       Text="{Binding Group}" />
+            <Border x:Name="ShortcutChip" Grid.Column="3" Style="{StaticResource Keycap}" Margin="12,0,0,0">
+                <TextBlock Style="{StaticResource Keycap.Text}" Text="{Binding Shortcut}" />
+            </Border>
+        </Grid>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Subtitle}" Value="{x:Null}">
+                <Setter TargetName="SubtitleText" Property="Visibility" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Group}" Value="{x:Null}">
+                <Setter TargetName="GroupText" Property="Visibility" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Shortcut}" Value="{x:Null}">
+                <Setter TargetName="ShortcutChip" Property="Visibility" Value="Collapsed" />
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+    <Style TargetType="ui:CommandPalette">
+        <Setter Property="FontFamily" Value="{StaticResource Font.Sans}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSize.Body}" />
+        <Setter Property="Foreground" Value="{DynamicResource Brush.TextPrimary}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ui:CommandPalette">
+                    <Grid>
+                        <Border x:Name="PART_Scrim" Background="{DynamicResource Brush.Overlay}" />
+                        <Border x:Name="PART_Panel" Width="600" Margin="24,88,24,24" HorizontalAlignment="Center" VerticalAlignment="Top"
+                                Background="{DynamicResource Brush.SurfaceRaised}" BorderBrush="{DynamicResource Brush.Border}" BorderThickness="1"
+                                CornerRadius="{StaticResource Radius.XLarge}" Effect="{DynamicResource Effect.Elevation3}"
+                                KeyboardNavigation.TabNavigation="Cycle">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Grid Height="52" Margin="18,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <ui:Icon Data="{StaticResource Icon.Search}" Size="18" Foreground="{DynamicResource Brush.TextSecondary}" Margin="0,0,12,0" />
+                                    <Grid Grid.Column="1">
+                                        <TextBox x:Name="PART_Search" Style="{StaticResource TextBox.Bare}" FontSize="{StaticResource FontSize.Subheading}"
+                                                 AutomationProperties.Name="{TemplateBinding Placeholder}"
+                                                 Text="{Binding Query, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                        <TextBlock x:Name="Placeholder" Style="{StaticResource Field.PlaceholderText}" Margin="2,0"
+                                                   FontSize="{StaticResource FontSize.Subheading}" Text="{TemplateBinding Placeholder}" />
+                                    </Grid>
+                                    <Border Grid.Column="2" Style="{StaticResource Keycap}" Margin="12,0,0,0">
+                                        <TextBlock Style="{StaticResource Keycap.Text}" Text="Esc" />
+                                    </Border>
+                                </Grid>
+
+                                <Border Grid.Row="1" Height="1" Background="{DynamicResource Brush.Border}" />
+
+                                <ListBox x:Name="PART_Results" Grid.Row="2" Margin="6" MaxHeight="380" Focusable="False" Background="Transparent"
+                                         BorderThickness="0" Padding="0" ItemContainerStyle="{StaticResource Palette.Item}"
+                                         ItemTemplate="{StaticResource Palette.ItemTemplate}" FontFamily="{TemplateBinding FontFamily}"
+                                         ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                                    <ListBox.Template>
+                                        <ControlTemplate TargetType="ListBox">
+                                            <ScrollViewer Focusable="False" Padding="{TemplateBinding Padding}">
+                                                <ItemsPresenter />
+                                            </ScrollViewer>
+                                        </ControlTemplate>
+                                    </ListBox.Template>
+                                </ListBox>
+                                <TextBlock x:Name="EmptyText" Grid.Row="2" Style="{StaticResource Text.Secondary}" Margin="18,28" TextAlignment="Center"
+                                           Text="{TemplateBinding EmptyText}" Visibility="Collapsed" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Query" Value="">
+                            <Setter TargetName="Placeholder" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="HasResults" Value="False">
+                            <Setter TargetName="PART_Results" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="EmptyText" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
