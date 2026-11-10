@@ -27,19 +27,40 @@ People in finance operations (accounts payable/receivable, controlling, accounti
 
 ## Demo
 
-<!-- screenshot: Overview page with sample data, light theme -->
-<!-- screenshot: Tasks page with the details panel open (Ctrl+N quick add visible), dark theme -->
-<!-- screenshot: Calendar month view with a drag-and-drop confirmation dialog -->
-<!-- screenshot: A Windows toast reminder with the Snooze / Done buttons -->
-<!-- gif: switching language EN ↔ RO and theme live from Settings -->
+Screenshots of the real app window, taken with `build/capture-window.ps1` on fictitious sample data (`--seed`).
 
-Suggested captures:
+**Overview**: counters, top 3 priorities and the day's timeline.
 
-1. Overview with the sample data from the first-run guide (light theme).
-2. Tasks with the details panel open (dark theme, teal accent).
-3. Calendar, month view, while dragging a task to another day.
-4. A Windows notification with Snooze / Done, fired with the app closed.
-5. A short GIF of the live EN ↔ RO and light ↔ dark switch.
+![Overview, light theme](docs/screenshots/overview-light.png)
+
+**Tasks**: views with counts, quick add, and the details panel with inline editing and reminders (dark theme).
+
+![Tasks with the details panel, dark theme](docs/screenshots/tasks-details-dark.png)
+
+**Calendar**: month view with due dates, completed tasks struck through, weekends and Romanian public holidays.
+
+![Calendar, month view](docs/screenshots/calendar-light.png)
+
+<details>
+<summary>More screenshots: My Day, Settings, Romanian UI, first-run guide</summary>
+
+**My Day**: overdue, today and tomorrow, with the details panel.
+
+![My Day](docs/screenshots/my-day-light.png)
+
+**Settings**: Simple / Advanced mode, theme, accent color (teal here), language and date format.
+
+![Settings, dark theme, teal accent](docs/screenshots/settings-dark.png)
+
+**Romanian interface**: the same Overview with the language switched to Romanian.
+
+![Overview in Romanian, dark theme](docs/screenshots/overview-ro-dark.png)
+
+**First-run guide**, step 1 of 5.
+
+![First-run guide](docs/screenshots/onboarding.png)
+
+</details>
 
 ## Architecture
 
@@ -47,11 +68,11 @@ Six projects with dependency rules enforced by a test (`tests/FinanceOS.Architec
 
 ```mermaid
 flowchart TD
-    App["FinanceOS.App<br/>WPF shell, pages, ViewModels (MVVM), composition root"]
+    App["FinanceOS.App<br/>WPF shell, pages, ViewModels (MVVM), tray, composition root"]
     UI["FinanceOS.UI<br/>design system: tokens, themes, controls, localization"]
     Core["FinanceOS.Core<br/>domain: tasks, reminders, scheduler, calendar math, event bus"]
     Data["FinanceOS.Data<br/>SQLite + Dapper, migrations, backup, recovery"]
-    Platform["FinanceOS.Platform.Windows<br/>toasts, tray, single instance, logging"]
+    Platform["FinanceOS.Platform.Windows<br/>toasts, single instance, logging"]
     Integrations["FinanceOS.Integrations<br/>placeholder for future integrations"]
 
     App --> UI
@@ -74,6 +95,23 @@ flowchart TD
 | Time | `TimeProvider`; `FakeTimeProvider` in tests |
 | Tests | xUnit v3 on Microsoft.Testing.Platform; 530 automated tests (domain, SQLite, WPF ViewModels and rendering, architecture rules) |
 | Build | Central Package Management, nullable enabled, warnings as errors, single-file self-contained publish |
+
+### NuGet packages
+
+All versions are pinned centrally in [`Directory.Packages.props`](Directory.Packages.props).
+
+| Package | Version | Used in | Purpose |
+|---|---|---|---|
+| [CommunityToolkit.Mvvm](https://www.nuget.org/packages/CommunityToolkit.Mvvm) | 8.4.2 | App | MVVM source generators (observable properties, relay commands) |
+| [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection) | 10.0.13 | App | Composition root / dependency injection |
+| [Microsoft.Data.Sqlite](https://www.nuget.org/packages/Microsoft.Data.Sqlite) | 10.0.13 | Data | SQLite provider (bundled native SQLite with FTS5) |
+| [Dapper](https://www.nuget.org/packages/Dapper) | 2.1.89 | Data | Explicit SQL with lightweight object mapping |
+| [Microsoft.Extensions.Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) | 10.0.13 | App | Logging pipeline (with a custom redacting file sink) |
+| [Microsoft.Extensions.Logging.Abstractions](https://www.nuget.org/packages/Microsoft.Extensions.Logging.Abstractions) | 10.0.13 | Data, Platform | Logging interfaces |
+| [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications) | 7.1.3 | Platform | Windows toast notifications with actions, scheduled toasts |
+| [H.NotifyIcon.Wpf](https://www.nuget.org/packages/H.NotifyIcon.Wpf) | 2.4.1 | App | System tray icon with a WPF context menu |
+| [xunit.v3](https://www.nuget.org/packages/xunit.v3) | 4.0.2 | all test projects | Test framework (Microsoft.Testing.Platform runner) |
+| [Microsoft.Extensions.TimeProvider.Testing](https://www.nuget.org/packages/Microsoft.Extensions.TimeProvider.Testing) | 10.0.0 | Data.Tests | `FakeTimeProvider` for deterministic reminder/scheduler tests |
 
 ## Technical challenges
 
