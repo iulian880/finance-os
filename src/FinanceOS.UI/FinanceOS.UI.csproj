@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Design system: tokens, themes, controls, icons. Must not reference any other FinanceOS project. -->
+  <PropertyGroup>
+    <TargetFramework>$(WindowsTfm)</TargetFramework>
+    <SupportedOSPlatformVersion>$(WindowsMinVersion)</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <!-- Required by [LibraryImport] source-generated interop (DWM window attributes). -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="FinanceOS.UI.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Inter 4.1 (SIL OFL 1.1, see Fonts/Inter-OFL.txt), static weights: WPF does not support variable-font axes. -->
+    <Resource Include="Fonts\*.ttf" />
+    <None Include="Fonts\Inter-OFL.txt" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

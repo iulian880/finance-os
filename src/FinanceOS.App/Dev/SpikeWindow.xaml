@@ -1,0 +1,51 @@
+﻿<Window x:Class="FinanceOS.App.Dev.SpikeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Finance OS — Spike M0"
+        Width="900" Height="620" MinWidth="640" MinHeight="420"
+        WindowStartupLocation="CenterScreen"
+        Background="#F7F7F9"
+        FontFamily="Segoe UI" FontSize="13">
+    <!-- Deliberately unstyled: M0 is a technical spike. The design system arrives in M1–M4. -->
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Spike tehnic M0 — notificări, tray, single instance, publish" FontSize="18" FontWeight="SemiBold" />
+
+        <WrapPanel Grid.Row="1" Margin="0,12,0,0">
+            <TextBlock Margin="0,0,24,0"><Run Text="Pornire: " Foreground="#666" /><Run x:Name="StartupText" Text="…" /></TextBlock>
+            <TextBlock Margin="0,0,24,0"><Run Text="Memorie: " Foreground="#666" /><Run x:Name="MemoryText" Text="…" /></TextBlock>
+            <TextBlock Margin="0,0,24,0"><Run Text="Notificări Windows: " Foreground="#666" /><Run x:Name="NotificationText" Text="…" /></TextBlock>
+            <TextBlock><Run Text="PID: " Foreground="#666" /><Run x:Name="PidText" Text="…" /></TextBlock>
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="2" Margin="0,16,0,12">
+            <WrapPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="0,0,8,8" />
+                    <Setter Property="Padding" Value="12,6" />
+                </Style>
+            </WrapPanel.Resources>
+            <WrapPanel x:Name="ToastButtons">
+                <Button AutomationProperties.AutomationId="ShowNow" Content="Toast acum" Click="OnShowNow" />
+                <Button AutomationProperties.AutomationId="ScheduleOneMinute" Content="Programează +1 min" Click="OnScheduleOneMinute" />
+                <Button AutomationProperties.AutomationId="ScheduleThreeMinutes" Content="Programează +3 min" Click="OnScheduleThreeMinutes" />
+                <Button AutomationProperties.AutomationId="ListToasts" Content="Programate / livrate" Click="OnListToasts" />
+                <Button AutomationProperties.AutomationId="CancelScheduled" Content="Anulează programate" Click="OnCancelScheduled" />
+            </WrapPanel>
+            <Button AutomationProperties.AutomationId="CloseToTray" Content="Închide în tray" Click="OnCloseToTray" />
+            <Button AutomationProperties.AutomationId="Refresh" Content="Reîmprospătează" Click="OnRefresh" />
+            <Button AutomationProperties.AutomationId="Exit" Content="Ieșire" Click="OnExit" />
+            <Button x:Name="TokensButton" AutomationProperties.AutomationId="DesignTokens" Content="Design tokens (Debug)"
+                    Click="OnOpenTokens" Visibility="Collapsed" />
+        </WrapPanel>
+
+        <TextBox x:Name="LogBox" Grid.Row="3" IsReadOnly="True" FontFamily="Cascadia Mono, Consolas" FontSize="12"
+                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextWrapping="NoWrap" />
+    </Grid>
+</Window>

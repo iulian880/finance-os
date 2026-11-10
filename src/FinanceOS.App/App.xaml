@@ -1,0 +1,15 @@
+﻿<Application x:Class="FinanceOS.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- No StartupUri: App.OnStartup decides whether to show the window, stay in tray, or exit. -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Tokens + typography. Theme colors are added at runtime by ThemeManager. -->
+                <ResourceDictionary Source="/FinanceOS.UI;component/Themes/FinanceOS.xaml" />
+                <!-- Views for the shell's pages (DataTemplates by ViewModel type). -->
+                <ResourceDictionary Source="/Shell/PageTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

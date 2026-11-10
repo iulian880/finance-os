@@ -1,0 +1,178 @@
+<!-- TimePicker (FinanceOS.UI.Controls.TimePicker): same field chrome as DatePicker, list of times in the popup. -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ui="clr-namespace:FinanceOS.UI.Controls">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/FinanceOS.UI;component/Themes/Controls/Button.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="TimePicker.Toggle" TargetType="ToggleButton">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Width" Value="28" />
+        <Setter Property="Height" Value="28" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Foreground" Value="{DynamicResource Brush.TextSecondary}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border x:Name="Chrome" Background="Transparent" CornerRadius="{StaticResource Radius.Small}">
+                        <Viewbox Width="16" Height="16">
+                            <Path Style="{StaticResource Glyph.Path}" Data="{StaticResource Icon.Clock}"
+                                  Stroke="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Viewbox>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Chrome" Property="Background" Value="{DynamicResource Brush.SurfaceHover}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Chrome" Property="Background" Value="{DynamicResource Brush.SurfacePressed}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{DynamicResource Brush.TextTertiary}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TimePicker.Item" TargetType="ListBoxItem" BasedOn="{StaticResource ListRow.Base}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Border x:Name="Row" Background="Transparent" CornerRadius="{StaticResource Radius.Small}" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Row" Property="Background" Value="{DynamicResource Brush.SurfaceHover}" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="Row" Property="Background" Value="{DynamicResource Brush.AccentSubtle}" />
+                            <Setter Property="Foreground" Value="{DynamicResource Brush.AccentText}" />
+                            <Setter Property="FontWeight" Value="Medium" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="ui:TimePicker">
+        <Setter Property="FontFamily" Value="{StaticResource Font.Sans}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSize.Body}" />
+        <Setter Property="Foreground" Value="{DynamicResource Brush.TextPrimary}" />
+        <Setter Property="Background" Value="{DynamicResource Brush.Surface}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Brush.BorderStrong}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="12,0,2,0" />
+        <Setter Property="MinHeight" Value="32" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ui:TimePicker">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock x:Name="Header" Style="{StaticResource Field.HeaderText}"
+                                   Text="{TemplateBinding ui:FieldAssist.Header}" />
+
+                        <Grid x:Name="Box" Grid.Row="1" MinHeight="{TemplateBinding MinHeight}">
+                            <Border x:Name="Chrome" Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{StaticResource Radius.Medium}" />
+                            <Border x:Name="Underline" BorderBrush="{DynamicResource Brush.ControlStrongStroke}"
+                                    BorderThickness="0,0,0,1" CornerRadius="{StaticResource Radius.Medium}" />
+                            <Grid Margin="{TemplateBinding Padding}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="PART_TextBox" Style="{StaticResource TextBox.Bare}" VerticalAlignment="Center"
+                                         AutomationProperties.Name="{Binding (AutomationProperties.Name), RelativeSource={RelativeSource TemplatedParent}}"
+                                         AutomationProperties.HelpText="{Binding (AutomationProperties.HelpText), RelativeSource={RelativeSource TemplatedParent}}" />
+                                <TextBlock x:Name="Placeholder" Style="{StaticResource Field.PlaceholderText}" Margin="2,0"
+                                           Text="{TemplateBinding ui:FieldAssist.Placeholder}" />
+                                <ToggleButton x:Name="Toggle" Grid.Column="1" Style="{StaticResource TimePicker.Toggle}"
+                                              IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                              IsHitTestVisible="{Binding IsOpen, ElementName=PART_Popup, Converter={x:Static ui:BooleanNegationConverter.Instance}}" />
+                            </Grid>
+                            <Popup x:Name="PART_Popup" AllowsTransparency="True" StaysOpen="False" PopupAnimation="None" Focusable="False"
+                                   Placement="Bottom" PlacementTarget="{Binding ElementName=Box}" HorizontalOffset="-12"
+                                   IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+                                <Border Style="{StaticResource Popup.Surface}" MinWidth="{Binding ActualWidth, ElementName=Box}">
+                                    <ListBox x:Name="PART_List" MaxHeight="280" Focusable="False" Background="Transparent" BorderThickness="0"
+                                             Padding="0" ItemContainerStyle="{StaticResource TimePicker.Item}"
+                                             ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="True"
+                                             VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling"
+                                             FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}">
+                                        <ListBox.Template>
+                                            <ControlTemplate TargetType="ListBox">
+                                                <ScrollViewer Focusable="False" Padding="{TemplateBinding Padding}" CanContentScroll="True">
+                                                    <ItemsPresenter />
+                                                </ScrollViewer>
+                                            </ControlTemplate>
+                                        </ListBox.Template>
+                                    </ListBox>
+                                </Border>
+                            </Popup>
+                        </Grid>
+
+                        <TextBlock x:Name="Helper" Grid.Row="2" Style="{StaticResource Field.MessageText}"
+                                   Text="{TemplateBinding ui:FieldAssist.HelperText}" />
+                        <TextBlock x:Name="Error" Grid.Row="2" Style="{StaticResource Field.ErrorText}" Visibility="Collapsed"
+                                   Text="{TemplateBinding ui:FieldAssist.ErrorText}" />
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="ui:FieldAssist.Header" Value="{x:Null}">
+                            <Setter TargetName="Header" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="ui:FieldAssist.Header" Value="">
+                            <Setter TargetName="Header" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="ui:FieldAssist.HelperText" Value="{x:Null}">
+                            <Setter TargetName="Helper" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger SourceName="PART_TextBox" Property="Text" Value="">
+                            <Setter TargetName="Placeholder" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger SourceName="Box" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Chrome" Property="Background" Value="{DynamicResource Brush.SurfaceHover}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                            <Setter TargetName="Chrome" Property="Background" Value="{DynamicResource Brush.Surface}" />
+                            <Setter TargetName="Chrome" Property="BorderBrush" Value="{DynamicResource Brush.FocusRing}" />
+                            <Setter TargetName="Underline" Property="BorderBrush" Value="{DynamicResource Brush.FocusRing}" />
+                            <Setter TargetName="Underline" Property="BorderThickness" Value="0,0,0,2" />
+                        </Trigger>
+                        <Trigger Property="ui:FieldAssist.HasError" Value="True">
+                            <Setter TargetName="Chrome" Property="BorderBrush" Value="{DynamicResource Brush.Danger}" />
+                            <Setter TargetName="Underline" Property="BorderBrush" Value="{DynamicResource Brush.Danger}" />
+                            <Setter TargetName="Helper" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="Error" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Chrome" Property="Background" Value="{DynamicResource Brush.SurfaceSunken}" />
+                            <Setter TargetName="Chrome" Property="BorderBrush" Value="{DynamicResource Brush.Border}" />
+                            <Setter TargetName="Underline" Property="BorderBrush" Value="Transparent" />
+                            <Setter TargetName="Header" Property="Foreground" Value="{DynamicResource Brush.TextTertiary}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

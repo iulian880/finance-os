@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Section.Overview.Title" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Section.Overview.Subtitle" xml:space="preserve">
+    <value>Your day at a glance: priorities, summary and what comes next.</value>
+  </data>
+  <data name="Section.MyDay.Title" xml:space="preserve">
+    <value>My Day</value>
+  </data>
+  <data name="Section.MyDay.Subtitle" xml:space="preserve">
+    <value>What you do today, what fell behind and what comes tomorrow.</value>
+  </data>
+  <data name="Section.MyDay.EmptyTitle" xml:space="preserve">
+    <value>Your day is free</value>
+  </data>
+  <data name="Section.MyDay.EmptyDescription" xml:space="preserve">
+    <value>Tasks due today, overdue ones and what comes tomorrow show up here, in the order that matters.</value>
+  </data>
+  <data name="Section.Tasks.Title" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="Section.Tasks.Subtitle" xml:space="preserve">
+    <value>All your tasks, with Today, Upcoming, Overdue and Completed views.</value>
+  </data>
+  <data name="Section.Tasks.EmptyTitle" xml:space="preserve">
+    <value>No tasks yet</value>
+  </data>
+  <data name="Section.Tasks.EmptyDescription" xml:space="preserve">
+    <value>The full task list, with filters, sorting and quick editing in the panel on the right.</value>
+  </data>
+  <data name="Section.Calendar.Title" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="Section.Calendar.Subtitle" xml:space="preserve">
+    <value>Your due dates by month, week and day.</value>
+  </data>
+  <data name="Section.Calendar.EmptyTitle" xml:space="preserve">
+    <value>The calendar is empty</value>
+  </data>
+  <data name="Section.Calendar.EmptyDescription" xml:space="preserve">
+    <value>Month, week, day and agenda views. Drag a task to another day to move it; changing a due date asks for confirmation.</value>
+  </data>
+  <data name="Section.Reminders.Title" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="Section.Reminders.Subtitle" xml:space="preserve">
+    <value>All your reminders, including the missed ones.</value>
+  </data>
+  <data name="Section.Reminders.EmptyTitle" xml:space="preserve">
+    <value>No reminders</value>
+  </data>
+  <data name="Section.Reminders.EmptyDescription" xml:space="preserve">
+    <value>Reminders at a fixed time or relative to the due date, delivered even when the app is closed or the PC was asleep.</value>
+  </data>
+  <data name="Section.Workflows.Title" xml:space="preserve">
+    <value>Workflows</value>
+  </data>
+  <data name="Section.Workflows.Subtitle" xml:space="preserve">
+    <value>Repetitive processes turned into clear steps.</value>
+  </data>
+  <data name="Section.Workflows.EmptyTitle" xml:space="preserve">
+    <value>No workflows</value>
+  </data>
+  <data name="Section.Workflows.EmptyDescription" xml:space="preserve">
+    <value>Templates for month-end close, reporting or intercompany: stages, checklists and due dates generated automatically.</value>
+  </data>
+  <data name="Section.Projects.Title" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="Section.Projects.Subtitle" xml:space="preserve">
+    <value>Tasks grouped by project, with progress.</value>
+  </data>
+  <data name="Section.Projects.EmptyTitle" xml:space="preserve">
+    <value>No projects</value>
+  </data>
+  <data name="Section.Projects.EmptyDescription" xml:space="preserve">
+    <value>Group tasks by project and see at a glance how much is left.</value>
+  </data>
+  <data name="Section.Analytics.Title" xml:space="preserve">
+    <value>Analytics</value>
+  </data>
+  <data name="Section.Analytics.Subtitle" xml:space="preserve">
+    <value>How your work is going, for your eyes only.</value>
+  </data>
+  <data name="Section.Analytics.EmptyTitle" xml:space="preserve">
+    <value>No data yet</value>
+  </data>
+  <data name="Section.Analytics.EmptyDescription" xml:space="preserve">
+    <value>Tasks completed per day and week, delays and estimated vs. actual time. No “productivity score”.</value>
+  </data>
+  <data name="Section.Archive.Title" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="Section.Archive.Subtitle" xml:space="preserve">
+    <value>Completed and archived tasks, searchable any time.</value>
+  </data>
+  <data name="Section.Archive.EmptyTitle" xml:space="preserve">
+    <value>The archive is empty</value>
+  </data>
+  <data name="Section.Archive.EmptyDescription" xml:space="preserve">
+    <value>Completed and archived tasks stay here and show up in search, so you can always find them again.</value>
+  </data>
+  <data name="Section.Settings.Title" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Section.Settings.Subtitle" xml:space="preserve">
+    <value>Appearance, language, working hours and notifications.</value>
+  </data>
+  <data name="Nav.Group.Organize" xml:space="preserve">
+    <value>Organize</value>
+  </data>
+  <data name="Nav.Group.Insight" xml:space="preserve">
+    <value>Insight</value>
+  </data>
+  <data name="Common.ComingSoon" xml:space="preserve">
+    <value>Coming soon</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common.Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Shell.Navigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="Shell.ToggleSidebar.Name" xml:space="preserve">
+    <value>Collapse or expand the sidebar</value>
+  </data>
+  <data name="Shell.ToggleSidebar.ToolTip" xml:space="preserve">
+    <value>Collapse / expand the sidebar (Ctrl+B)</value>
+  </data>
+  <data name="Shell.Search" xml:space="preserve">
+    <value>Search or run a command</value>
+  </data>
+  <data name="Shell.Search.Name" xml:space="preserve">
+    <value>Search or run a command (Ctrl+K)</value>
+  </data>
+  <data name="Shell.ToggleTheme.Name" xml:space="preserve">
+    <value>Switch theme</value>
+  </data>
+  <data name="Shell.ToggleTheme.ToolTip" xml:space="preserve">
+    <value>Switch between the light and dark theme</value>
+  </data>
+  <data name="Shell.Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Shell.DetailsPanel" xml:space="preserve">
+    <value>Details panel</value>
+  </data>
+  <data name="Shell.Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Shell.ClosePanel" xml:space="preserve">
+    <value>Close panel</value>
+  </data>
+  <data name="Shell.DetailsEmpty.Title" xml:space="preserve">
+    <value>No task selected</value>
+  </data>
+  <data name="Shell.DetailsEmpty.Description" xml:space="preserve">
+    <value>Select a task to see its details, checklist and reminders here, without leaving the list.</value>
+  </data>
+  <data name="Shell.NotificationsEmpty.Title" xml:space="preserve">
+    <value>No notifications</value>
+  </data>
+  <data name="Shell.NotificationsEmpty.Description" xml:space="preserve">
+    <value>Reminders and follow-ups show up here, including the ones missed while the PC was off or asleep.</value>
+  </data>
+  <data name="Shell.Palette.Placeholder" xml:space="preserve">
+    <value>Search for a command or a section…</value>
+  </data>
+  <data name="Shell.Palette.Empty" xml:space="preserve">
+    <value>No results. Try another word.</value>
+  </data>
+  <data name="Command.Group.Navigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="Command.Group.Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Command.Group.Panel" xml:space="preserve">
+    <value>Panel</value>
+  </data>
+  <data name="Command.GoTo" xml:space="preserve">
+    <value>Go to {0}</value>
+  </data>
+  <data name="Command.ToggleTheme" xml:space="preserve">
+    <value>Switch theme (light / dark)</value>
+  </data>
+  <data name="Command.ToggleSidebar" xml:space="preserve">
+    <value>Collapse / expand the sidebar</value>
+  </data>
+  <data name="Command.ShowNotifications" xml:space="preserve">
+    <value>Show notifications</value>
+  </data>
+  <data name="Command.ShowDetails" xml:space="preserve">
+    <value>Show the details panel</value>
+  </data>
+  <data name="Overview.Greeting.Morning" xml:space="preserve">
+    <value>Good morning</value>
+  </data>
+  <data name="Overview.Greeting.Afternoon" xml:space="preserve">
+    <value>Good afternoon</value>
+  </data>
+  <data name="Overview.Greeting.Evening" xml:space="preserve">
+    <value>Good evening</value>
+  </data>
+  <data name="Overview.Stat.InProgress" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="Overview.Stat.InProgress.Hint" xml:space="preserve">
+    <value>open tasks</value>
+  </data>
+  <data name="Overview.Stat.DoneToday" xml:space="preserve">
+    <value>Done today</value>
+  </data>
+  <data name="Overview.Stat.DoneToday.Hint" xml:space="preserve">
+    <value>since midnight</value>
+  </data>
+  <data name="Overview.Stat.Overdue" xml:space="preserve">
+    <value>Overdue</value>
+  </data>
+  <data name="Overview.Stat.Overdue.Hint" xml:space="preserve">
+    <value>past due</value>
+  </data>
+  <data name="Overview.Stat.Waiting" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="Overview.Stat.Waiting.Hint" xml:space="preserve">
+    <value>awaiting a reply</value>
+  </data>
+  <data name="Overview.Top3.Header" xml:space="preserve">
+    <value>Top 3 priorities</value>
+  </data>
+  <data name="Overview.Top3.Description" xml:space="preserve">
+    <value>What matters most today.</value>
+  </data>
+  <data name="Overview.Top3.EmptyTitle" xml:space="preserve">
+    <value>No priorities yet</value>
+  </data>
+  <data name="Overview.Top3.EmptyDescription" xml:space="preserve">
+    <value>Pin tasks or give them a priority; the three that matter most show up here.</value>
+  </data>
+  <data name="Overview.Today.Header" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Overview.Today.Description" xml:space="preserve">
+    <value>Due dates and reminders, in order of time.</value>
+  </data>
+  <data name="Overview.Today.EmptyTitle" xml:space="preserve">
+    <value>Nothing scheduled</value>
+  </data>
+  <data name="Overview.Today.EmptyDescription" xml:space="preserve">
+    <value>When you add tasks with due dates or reminders, your day shows up here as a timeline.</value>
+  </data>
+  <data name="Settings.Appearance.Header" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Settings.Appearance.Description" xml:space="preserve">
+    <value>Applied immediately and kept for the next start.</value>
+  </data>
+  <data name="Settings.Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Settings.Theme.System" xml:space="preserve">
+    <value>Same as Windows</value>
+  </data>
+  <data name="Settings.Theme.Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Settings.Theme.Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Settings.Accent" xml:space="preserve">
+    <value>Accent color</value>
+  </data>
+  <data name="Accent.indigo" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="Accent.blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="Accent.teal" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="Accent.emerald" xml:space="preserve">
+    <value>Emerald</value>
+  </data>
+  <data name="Accent.violet" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="Accent.rose" xml:space="preserve">
+    <value>Rose</value>
+  </data>
+  <data name="Accent.amber" xml:space="preserve">
+    <value>Amber</value>
+  </data>
+  <data name="Accent.graphite" xml:space="preserve">
+    <value>Graphite</value>
+  </data>
+  <data name="Settings.Language.Header" xml:space="preserve">
+    <value>Language and format</value>
+  </data>
+  <data name="Settings.Language.Description" xml:space="preserve">
+    <value>Applied immediately to the whole app and kept for the next start.</value>
+  </data>
+  <data name="Settings.Language" xml:space="preserve">
+    <value>Display language</value>
+  </data>
+  <data name="Settings.Data.Header" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Settings.Data.Description" xml:space="preserve">
+    <value>Everything stays local, on this computer. Nothing is sent to the cloud.</value>
+  </data>
+  <data name="Settings.Data.Folder" xml:space="preserve">
+    <value>App folder</value>
+  </data>
+  <data name="Settings.Data.FolderHelp" xml:space="preserve">
+    <value>The database, backups and logs are here.</value>
+  </data>
+  <data name="Settings.Data.BackupNow" xml:space="preserve">
+    <value>Back up now</value>
+  </data>
+  <data name="Settings.Data.OpenFolder" xml:space="preserve">
+    <value>Open folder</value>
+  </data>
+  <data name="Settings.Backup.Created" xml:space="preserve">
+    <value>Backup created: {0}.</value>
+  </data>
+  <data name="Settings.Backup.Failed" xml:space="preserve">
+    <value>The backup did not work. The details are in the app log, in the folder above.</value>
+  </data>
+  <data name="Settings.Backup.Last" xml:space="preserve">
+    <value>Last backup: {0}. Automatic once a day; 7 daily and 4 weekly backups are kept.</value>
+  </data>
+  <data name="Settings.Backup.None" xml:space="preserve">
+    <value>No backup yet. The first one runs automatically today, shortly after start-up.</value>
+  </data>
+  <data name="Settings.About.Header" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Settings.About.Description" xml:space="preserve">
+    <value>Finance OS, a local app for finance tasks and deadlines.</value>
+  </data>
+  <data name="Settings.About.Contact" xml:space="preserve">
+    <value>Ideas for improvements or found a problem? Write to</value>
+  </data>
+  <data name="Settings.About.Feedback" xml:space="preserve">
+    <value>Send a suggestion or a bug</value>
+  </data>
+  <data name="Settings.About.FeedbackToolTip" xml:space="preserve">
+    <value>Opens a new e-mail with the app version filled in</value>
+  </data>
+  <data name="Settings.About.Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Feedback.Subject" xml:space="preserve">
+    <value>Finance OS {0} – suggestion / problem</value>
+  </data>
+  <data name="Feedback.Describe" xml:space="preserve">
+    <value>Describe the suggestion or the problem:</value>
+  </data>
+  <data name="Feedback.Steps" xml:space="preserve">
+    <value>Steps to reproduce (if it is a problem):</value>
+  </data>
+  <data name="Feedback.Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Feedback.Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Recovery.WindowTitle" xml:space="preserve">
+    <value>Finance OS — data recovery</value>
+  </data>
+  <data name="Recovery.Title.Corrupt" xml:space="preserve">
+    <value>The database cannot be opened safely</value>
+  </data>
+  <data name="Recovery.Title.TooNew" xml:space="preserve">
+    <value>Your data comes from a newer version of Finance OS</value>
+  </data>
+  <data name="Recovery.Title.Failed" xml:space="preserve">
+    <value>Finance OS could not open the database</value>
+  </data>
+  <data name="Recovery.Message.Corrupt" xml:space="preserve">
+    <value>The integrity check at start-up found problems in the data file, so it was neither used nor changed. You can restore a backup: the current state is kept as a separate copy either way.</value>
+  </data>
+  <data name="Recovery.Message.TooNew" xml:space="preserve">
+    <value>Your data was saved by a newer version (schema {0}), and this one only understands up to schema {1}. Nothing was changed. Start the newer version of the app to keep working.</value>
+  </data>
+  <data name="Recovery.Message.Failed" xml:space="preserve">
+    <value>The data file seems to be locked by another program (for example an antivirus or a backup in progress), or permissions are missing. Your data was not changed. Try again in a few seconds.</value>
+  </data>
+  <data name="Recovery.Error.Restore" xml:space="preserve">
+    <value>The restore did not work. Choose another backup or open the data folder.</value>
+  </data>
+  <data name="Recovery.Error.Retry" xml:space="preserve">
+    <value>The database is still unavailable.</value>
+  </data>
+  <data name="Recovery.Error.StartFresh" xml:space="preserve">
+    <value>A new database could not be created.</value>
+  </data>
+  <data name="Recovery.Backups.Header" xml:space="preserve">
+    <value>Available backups</value>
+  </data>
+  <data name="Recovery.Backups.Description" xml:space="preserve">
+    <value>The most recent good backup is selected. Backups are made automatically once a day and before every update.</value>
+  </data>
+  <data name="Recovery.Backups.None" xml:space="preserve">
+    <value>There is no backup for this data yet.</value>
+  </data>
+  <data name="Recovery.Backup.Unusable" xml:space="preserve">
+    <value>cannot be used</value>
+  </data>
+  <data name="Recovery.StartFresh.Ask" xml:space="preserve">
+    <value>No suitable backup? Start with an empty database</value>
+  </data>
+  <data name="Recovery.StartFresh.Title" xml:space="preserve">
+    <value>Start with an empty database?</value>
+  </data>
+  <data name="Recovery.StartFresh.Text" xml:space="preserve">
+    <value>The current file is not deleted: it stays in the backups folder as a “damaged” copy, for analysis. The tasks in it will not appear in the app.</value>
+  </data>
+  <data name="Recovery.StartFresh.Confirm" xml:space="preserve">
+    <value>Yes, start with an empty database</value>
+  </data>
+  <data name="Recovery.TechnicalDetails" xml:space="preserve">
+    <value>Technical details:</value>
+  </data>
+  <data name="Recovery.OpenDataFolder" xml:space="preserve">
+    <value>Open the data folder</value>
+  </data>
+  <data name="Recovery.Restore" xml:space="preserve">
+    <value>Restore the selected backup</value>
+  </data>
+  <data name="Recovery.Retry" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="Backup.Kind.Daily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="Backup.Kind.PreMigration" xml:space="preserve">
+    <value>Before an update</value>
+  </data>
+  <data name="Backup.Kind.PreRestore" xml:space="preserve">
+    <value>Before a restore</value>
+  </data>
+  <data name="Backup.Kind.PreImport" xml:space="preserve">
+    <value>Before an import</value>
+  </data>
+  <data name="Backup.Kind.Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="Backup.Kind.Other" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Tray.Open" xml:space="preserve">
+    <value>Open Finance OS</value>
+  </data>
+  <data name="Toast.Snooze" xml:space="preserve">
+    <value>Snooze</value>
+  </data>
+  <data name="Toast.Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Toast.Snoozed.Title" xml:space="preserve">
+    <value>Reminder snoozed</value>
+  </data>
+  <data name="Toast.Snoozed.Body" xml:space="preserve">
+    <value>Snoozed {0} min (from {1})</value>
+  </data>
+  <data name="Tasks.QuickAdd.Placeholder" xml:space="preserve">
+    <value>Add a task and press Enter</value>
+  </data>
+  <data name="Tasks.QuickAdd.Name" xml:space="preserve">
+    <value>New task</value>
+  </data>
+  <data name="Tasks.Views" xml:space="preserve">
+    <value>Views</value>
+  </data>
+  <data name="Tasks.View.All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Tasks.View.Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Tasks.View.Upcoming" xml:space="preserve">
+    <value>Upcoming</value>
+  </data>
+  <data name="Tasks.View.Overdue" xml:space="preserve">
+    <value>Overdue</value>
+  </data>
+  <data name="Tasks.View.Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Tasks.Sort" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="Tasks.Sort.Smart" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
+  <data name="Tasks.Sort.DueDate" xml:space="preserve">
+    <value>Due date</value>
+  </data>
+  <data name="Tasks.Sort.Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Tasks.Sort.Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Tasks.Sort.Created" xml:space="preserve">
+    <value>Newest first</value>
+  </data>
+  <data name="Tasks.List" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="Tasks.Row.Complete" xml:space="preserve">
+    <value>Mark as done</value>
+  </data>
+  <data name="Tasks.Row.Pinned" xml:space="preserve">
+    <value>Pinned</value>
+  </data>
+  <data name="Tasks.Empty.All.Title" xml:space="preserve">
+    <value>No open tasks</value>
+  </data>
+  <data name="Tasks.Empty.All.Description" xml:space="preserve">
+    <value>Type a task above and press Enter. Ctrl+N brings you here from anywhere.</value>
+  </data>
+  <data name="Tasks.Empty.Today.Title" xml:space="preserve">
+    <value>Nothing due today</value>
+  </data>
+  <data name="Tasks.Empty.Today.Description" xml:space="preserve">
+    <value>Tasks due today appear here. A task added in this view is due today.</value>
+  </data>
+  <data name="Tasks.Empty.Upcoming.Title" xml:space="preserve">
+    <value>Nothing coming up</value>
+  </data>
+  <data name="Tasks.Empty.Upcoming.Description" xml:space="preserve">
+    <value>Tasks due after today, in date order.</value>
+  </data>
+  <data name="Tasks.Empty.Overdue.Title" xml:space="preserve">
+    <value>Nothing overdue</value>
+  </data>
+  <data name="Tasks.Empty.Overdue.Description" xml:space="preserve">
+    <value>Tasks whose due date has passed show up here.</value>
+  </data>
+  <data name="Tasks.Empty.Completed.Title" xml:space="preserve">
+    <value>Nothing completed yet</value>
+  </data>
+  <data name="Tasks.Empty.Completed.Description" xml:space="preserve">
+    <value>Done and cancelled tasks, most recent first.</value>
+  </data>
+  <data name="Due.Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Due.Tomorrow" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="Due.Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="Priority.None" xml:space="preserve">
+    <value>No priority</value>
+  </data>
+  <data name="Priority.Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Priority.Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Priority.High" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="Priority.Urgent" xml:space="preserve">
+    <value>Urgent</value>
+  </data>
+  <data name="Status.status-todo" xml:space="preserve">
+    <value>To do</value>
+  </data>
+  <data name="Status.status-active" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="Status.status-waiting" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="Status.status-blocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="Status.status-done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Status.status-cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="Details.Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Details.Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Details.Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Details.DueDate" xml:space="preserve">
+    <value>Due date</value>
+  </data>
+  <data name="Details.DueTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Details.DueTimeHint" xml:space="preserve">
+    <value>Optional.</value>
+  </data>
+  <data name="Details.Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Details.Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Details.NoCategory" xml:space="preserve">
+    <value>No category</value>
+  </data>
+  <data name="Details.NoProject" xml:space="preserve">
+    <value>No project</value>
+  </data>
+  <data name="Details.Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="Details.AddTag" xml:space="preserve">
+    <value>Add a tag and press Enter</value>
+  </data>
+  <data name="Details.RemoveTag" xml:space="preserve">
+    <value>Remove tag {0}</value>
+  </data>
+  <data name="Details.Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Details.Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="Details.Checklist" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="Details.AddChecklistItem" xml:space="preserve">
+    <value>Add a step and press Enter</value>
+  </data>
+  <data name="Details.RemoveChecklistItem" xml:space="preserve">
+    <value>Remove step</value>
+  </data>
+  <data name="Details.Subtasks" xml:space="preserve">
+    <value>Subtasks</value>
+  </data>
+  <data name="Details.AddSubtask" xml:space="preserve">
+    <value>Add a subtask and press Enter</value>
+  </data>
+  <data name="Details.OpenTask" xml:space="preserve">
+    <value>Open {0}</value>
+  </data>
+  <data name="Details.Parent" xml:space="preserve">
+    <value>Subtask of</value>
+  </data>
+  <data name="Details.References" xml:space="preserve">
+    <value>People and references</value>
+  </data>
+  <data name="Details.Requester" xml:space="preserve">
+    <value>Requested by</value>
+  </data>
+  <data name="Details.Responsible" xml:space="preserve">
+    <value>Responsible</value>
+  </data>
+  <data name="Details.ExternalRef" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="Details.ExternalRefHint" xml:space="preserve">
+    <value>For example an invoice or ticket number.</value>
+  </data>
+  <data name="Details.ExternalUrl" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="Details.OpenLink" xml:space="preserve">
+    <value>Open the link in the browser</value>
+  </data>
+  <data name="Details.Complete" xml:space="preserve">
+    <value>Mark as done</value>
+  </data>
+  <data name="Details.Reopen" xml:space="preserve">
+    <value>Reopen</value>
+  </data>
+  <data name="Details.Duplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="Details.Archive" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="Details.Unarchive" xml:space="preserve">
+    <value>Unarchive</value>
+  </data>
+  <data name="Details.Delete" xml:space="preserve">
+    <value>Move to trash</value>
+  </data>
+  <data name="Details.Pin" xml:space="preserve">
+    <value>Pin to the top</value>
+  </data>
+  <data name="Details.Unpin" xml:space="preserve">
+    <value>Unpin</value>
+  </data>
+  <data name="Details.Created" xml:space="preserve">
+    <value>Created {0}</value>
+  </data>
+  <data name="Details.Updated" xml:space="preserve">
+    <value>changed {0}</value>
+  </data>
+  <data name="Details.CompletedAt" xml:space="preserve">
+    <value>Done {0}</value>
+  </data>
+  <data name="Details.Archived" xml:space="preserve">
+    <value>This task is archived.</value>
+  </data>
+  <data name="Details.CopyTitle" xml:space="preserve">
+    <value>{0} (copy)</value>
+  </data>
+  <data name="Validation.required" xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+  <data name="Validation.too_long" xml:space="preserve">
+    <value>The text is too long.</value>
+  </data>
+  <data name="Validation.not_found" xml:space="preserve">
+    <value>This no longer exists.</value>
+  </data>
+  <data name="Validation.deleted" xml:space="preserve">
+    <value>This was deleted.</value>
+  </data>
+  <data name="Validation.out_of_range" xml:space="preserve">
+    <value>The value is out of range.</value>
+  </data>
+  <data name="Validation.time_without_date" xml:space="preserve">
+    <value>Pick a date first.</value>
+  </data>
+  <data name="Validation.start_after_due" xml:space="preserve">
+    <value>The start is after the due date.</value>
+  </data>
+  <data name="Validation.invalid_url" xml:space="preserve">
+    <value>Only http:// or https:// links.</value>
+  </data>
+  <data name="Validation.invalid_color" xml:space="preserve">
+    <value>Not a valid color.</value>
+  </data>
+  <data name="Validation.duplicate" xml:space="preserve">
+    <value>One with this name already exists.</value>
+  </data>
+  <data name="Validation.self_parent" xml:space="preserve">
+    <value>A task cannot be its own subtask.</value>
+  </data>
+  <data name="Validation.nested_subtask" xml:space="preserve">
+    <value>Subtasks cannot have subtasks of their own.</value>
+  </data>
+  <data name="Validation.has_subtasks" xml:space="preserve">
+    <value>This task has subtasks, so it cannot become one.</value>
+  </data>
+  <data name="Validation.parent_in_trash" xml:space="preserve">
+    <value>Restore the parent task first.</value>
+  </data>
+  <data name="Validation.read_only" xml:space="preserve">
+    <value>The task is in the trash; restore it to change it.</value>
+  </data>
+  <data name="Toast.Deleted.Title" xml:space="preserve">
+    <value>Moved to trash</value>
+  </data>
+  <data name="Toast.Archived.Title" xml:space="preserve">
+    <value>Archived</value>
+  </data>
+  <data name="Toast.Duplicated.Title" xml:space="preserve">
+    <value>Copy created</value>
+  </data>
+  <data name="Toast.Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="Toast.Undone.Title" xml:space="preserve">
+    <value>Undone</value>
+  </data>
+  <data name="Toast.UndoConflict.Title" xml:space="preserve">
+    <value>Cannot undo</value>
+  </data>
+  <data name="Toast.UndoConflict.Body" xml:space="preserve">
+    <value>The task changed after that action.</value>
+  </data>
+  <data name="Toast.NothingToUndo" xml:space="preserve">
+    <value>Nothing to undo</value>
+  </data>
+  <data name="Toast.Failed.Title" xml:space="preserve">
+    <value>That did not work</value>
+  </data>
+  <data name="Action.task.create" xml:space="preserve">
+    <value>Create task</value>
+  </data>
+  <data name="Action.task.edit" xml:space="preserve">
+    <value>Edit task</value>
+  </data>
+  <data name="Action.task.status" xml:space="preserve">
+    <value>Change status</value>
+  </data>
+  <data name="Action.task.complete" xml:space="preserve">
+    <value>Complete task</value>
+  </data>
+  <data name="Action.task.reopen" xml:space="preserve">
+    <value>Reopen task</value>
+  </data>
+  <data name="Action.task.delete" xml:space="preserve">
+    <value>Move to trash</value>
+  </data>
+  <data name="Action.task.restore" xml:space="preserve">
+    <value>Restore from trash</value>
+  </data>
+  <data name="Action.task.archive" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="Action.task.unarchive" xml:space="preserve">
+    <value>Unarchive</value>
+  </data>
+  <data name="Action.task.duplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="Action.task.move" xml:space="preserve">
+    <value>Move task</value>
+  </data>
+  <data name="Action.checklist.add" xml:space="preserve">
+    <value>Add step</value>
+  </data>
+  <data name="Action.checklist.check" xml:space="preserve">
+    <value>Check step</value>
+  </data>
+  <data name="Action.checklist.rename" xml:space="preserve">
+    <value>Rename step</value>
+  </data>
+  <data name="Action.checklist.remove" xml:space="preserve">
+    <value>Remove step</value>
+  </data>
+  <data name="Action.tag.create" xml:space="preserve">
+    <value>Create tag</value>
+  </data>
+  <data name="Action.Other" xml:space="preserve">
+    <value>Last action</value>
+  </data>
+  <data name="Command.Group.Tasks" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="Command.NewTask" xml:space="preserve">
+    <value>New task</value>
+  </data>
+  <data name="Command.Undo" xml:space="preserve">
+    <value>Undo the last action</value>
+  </data>
+  <data name="MyDay.Group.Overdue" xml:space="preserve">
+    <value>Overdue</value>
+  </data>
+  <data name="MyDay.Group.Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="MyDay.Group.Tomorrow" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="MyDay.DoneToday" xml:space="preserve">
+    <value>Done today: {0}</value>
+  </data>
+  <data name="MyDay.List" xml:space="preserve">
+    <value>My day</value>
+  </data>
+  <data name="Overview.Today.AllDay" xml:space="preserve">
+    <value>All day</value>
+  </data>
+  <data name="Overview.Top3.List" xml:space="preserve">
+    <value>Top 3 priorities</value>
+  </data>
+  <data name="Overview.Today.List" xml:space="preserve">
+    <value>Today's timeline</value>
+  </data>
+  <data name="Reminder.Preset.0" xml:space="preserve">
+    <value>At the due time</value>
+  </data>
+  <data name="Reminder.Preset.15" xml:space="preserve">
+    <value>15 min before</value>
+  </data>
+  <data name="Reminder.Preset.30" xml:space="preserve">
+    <value>30 min before</value>
+  </data>
+  <data name="Reminder.Preset.60" xml:space="preserve">
+    <value>1 hour before</value>
+  </data>
+  <data name="Reminder.Preset.120" xml:space="preserve">
+    <value>2 hours before</value>
+  </data>
+  <data name="Reminder.Preset.1440" xml:space="preserve">
+    <value>1 day before</value>
+  </data>
+  <data name="Reminder.MinutesBefore" xml:space="preserve">
+    <value>{0} min before the due time</value>
+  </data>
+  <data name="Reminder.Snooze.5" xml:space="preserve">
+    <value>5 min</value>
+  </data>
+  <data name="Reminder.Snooze.10" xml:space="preserve">
+    <value>10 min</value>
+  </data>
+  <data name="Reminder.Snooze.15" xml:space="preserve">
+    <value>15 min</value>
+  </data>
+  <data name="Reminder.Snooze.30" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="Reminder.Snooze.60" xml:space="preserve">
+    <value>1 hour</value>
+  </data>
+  <data name="Reminder.Snooze.tomorrow" xml:space="preserve">
+    <value>Tomorrow at 09:00</value>
+  </data>
+  <data name="Reminder.Toast.Due" xml:space="preserve">
+    <value>Due: {0}</value>
+  </data>
+  <data name="Reminder.Next" xml:space="preserve">
+    <value>Next: {0}</value>
+  </data>
+  <data name="Reminder.NeedsDue" xml:space="preserve">
+    <value>Needs a due date</value>
+  </data>
+  <data name="Reminder.Passed" xml:space="preserve">
+    <value>Already passed</value>
+  </data>
+  <data name="Reminder.Inactive" xml:space="preserve">
+    <value>Not active while the task is closed</value>
+  </data>
+  <data name="Details.Reminders" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="Details.AddReminder" xml:space="preserve">
+    <value>Add a reminder</value>
+  </data>
+  <data name="Details.ReminderAt" xml:space="preserve">
+    <value>Or at a date and time</value>
+  </data>
+  <data name="Details.ReminderDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Details.ReminderTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Details.AddReminderButton" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Details.RemoveReminder" xml:space="preserve">
+    <value>Remove reminder</value>
+  </data>
+  <data name="Notifications.Reminder" xml:space="preserve">
+    <value>Reminder</value>
+  </data>
+  <data name="Notifications.Missed" xml:space="preserve">
+    <value>Missed reminders: {0}</value>
+  </data>
+  <data name="Notifications.MissedHint" xml:space="preserve">
+    <value>They came due while the app was not running.</value>
+  </data>
+  <data name="Notifications.Open" xml:space="preserve">
+    <value>Open the task</value>
+  </data>
+  <data name="Notifications.Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Notifications.Snooze" xml:space="preserve">
+    <value>Snooze</value>
+  </data>
+  <data name="Notifications.Dismiss" xml:space="preserve">
+    <value>Dismiss</value>
+  </data>
+  <data name="Notifications.MarkAllRead" xml:space="preserve">
+    <value>Mark all as read</value>
+  </data>
+  <data name="Notifications.List" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Notifications.Unread" xml:space="preserve">
+    <value>{0} unread</value>
+  </data>
+  <data name="Settings.Startup.Header" xml:space="preserve">
+    <value>Start-up</value>
+  </data>
+  <data name="Settings.Startup.Description" xml:space="preserve">
+    <value>Reminders are most reliable when the app runs in the tray all day. With the app closed, Windows shows them only while the PC is on.</value>
+  </data>
+  <data name="Settings.Startup.Toggle" xml:space="preserve">
+    <value>Start with Windows, in the tray</value>
+  </data>
+  <data name="Calendar.View.Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Calendar.View.Agenda" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+  <data name="Calendar.Views" xml:space="preserve">
+    <value>Calendar views</value>
+  </data>
+  <data name="Calendar.Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Calendar.Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Calendar.Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Calendar.More" xml:space="preserve">
+    <value>+{0} more</value>
+  </data>
+  <data name="Calendar.TaskCount" xml:space="preserve">
+    <value>tasks: {0}</value>
+  </data>
+  <data name="Calendar.Grid" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Calendar.Move.Question" xml:space="preserve">
+    <value>Move “{0}” from {1} to {2}?</value>
+  </data>
+  <data name="Calendar.Move.NoDue" xml:space="preserve">
+    <value>no date</value>
+  </data>
+  <data name="Calendar.Move.Confirm" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="Calendar.Move.Hint" xml:space="preserve">
+    <value>Drag a task onto another day to change its due date.</value>
+  </data>
+  <data name="Calendar.Agenda.Empty" xml:space="preserve">
+    <value>Nothing due in the next 30 days.</value>
+  </data>
+  <data name="Holiday.NewYear" xml:space="preserve">
+    <value>New Year</value>
+  </data>
+  <data name="Holiday.NewYear2" xml:space="preserve">
+    <value>New Year (2nd day)</value>
+  </data>
+  <data name="Holiday.Epiphany" xml:space="preserve">
+    <value>Epiphany</value>
+  </data>
+  <data name="Holiday.StJohn" xml:space="preserve">
+    <value>St John</value>
+  </data>
+  <data name="Holiday.Union" xml:space="preserve">
+    <value>Union Day</value>
+  </data>
+  <data name="Holiday.GoodFriday" xml:space="preserve">
+    <value>Good Friday</value>
+  </data>
+  <data name="Holiday.Easter" xml:space="preserve">
+    <value>Easter</value>
+  </data>
+  <data name="Holiday.EasterMonday" xml:space="preserve">
+    <value>Easter Monday</value>
+  </data>
+  <data name="Holiday.LabourDay" xml:space="preserve">
+    <value>Labour Day</value>
+  </data>
+  <data name="Holiday.ChildrensDay" xml:space="preserve">
+    <value>Children's Day</value>
+  </data>
+  <data name="Holiday.Pentecost" xml:space="preserve">
+    <value>Pentecost</value>
+  </data>
+  <data name="Holiday.PentecostMonday" xml:space="preserve">
+    <value>Pentecost Monday</value>
+  </data>
+  <data name="Holiday.Assumption" xml:space="preserve">
+    <value>Assumption</value>
+  </data>
+  <data name="Holiday.StAndrew" xml:space="preserve">
+    <value>St Andrew</value>
+  </data>
+  <data name="Holiday.NationalDay" xml:space="preserve">
+    <value>National Day</value>
+  </data>
+  <data name="Holiday.Christmas" xml:space="preserve">
+    <value>Christmas</value>
+  </data>
+  <data name="Holiday.Christmas2" xml:space="preserve">
+    <value>Christmas (2nd day)</value>
+  </data>
+  <data name="Calendar.View.Week" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="Calendar.View.Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="Calendar.WorkingHours" xml:space="preserve">
+    <value>Working hours {0}–{1}</value>
+  </data>
+  <data name="Calendar.OpenDay" xml:space="preserve">
+    <value>Open the day</value>
+  </data>
+  <data name="Settings.Schedule.Header" xml:space="preserve">
+    <value>Working hours and quiet hours</value>
+  </data>
+  <data name="Settings.Schedule.Description" xml:space="preserve">
+    <value>The calendar shows your working day. During quiet hours reminders wait and come when they end; due dates never change.</value>
+  </data>
+  <data name="Settings.WorkStart" xml:space="preserve">
+    <value>Work starts</value>
+  </data>
+  <data name="Settings.WorkEnd" xml:space="preserve">
+    <value>Work ends</value>
+  </data>
+  <data name="Settings.Quiet.Toggle" xml:space="preserve">
+    <value>Quiet hours for reminders</value>
+  </data>
+  <data name="Settings.QuietStart" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Settings.QuietEnd" xml:space="preserve">
+    <value>Until</value>
+  </data>
+  <data name="Settings.Quiet.Weekends" xml:space="preserve">
+    <value>Quiet all weekend too</value>
+  </data>
+  <data name="Settings.Mode.Header" xml:space="preserve">
+    <value>Working mode</value>
+  </data>
+  <data name="Settings.Mode.Description" xml:space="preserve">
+    <value>Simple shows the essentials; Advanced adds workflows, projects, analytics and the archive. Your data stays the same.</value>
+  </data>
+  <data name="Settings.Mode" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="Mode.Simple" xml:space="preserve">
+    <value>Simple</value>
+  </data>
+  <data name="Mode.Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="Settings.Mode.Simple.Description" xml:space="preserve">
+    <value>My Day, tasks, calendar and reminders. A project or references already filled in stay visible, read-only.</value>
+  </data>
+  <data name="Settings.Mode.Advanced.Description" xml:space="preserve">
+    <value>Every section and every task field.</value>
+  </data>
+  <data name="Settings.DateFormat" xml:space="preserve">
+    <value>Date format</value>
+  </data>
+  <data name="Settings.DateFormat.System" xml:space="preserve">
+    <value>Like Windows ({0})</value>
+  </data>
+  <data name="Command.Mode.ToAdvanced" xml:space="preserve">
+    <value>Switch to Advanced mode</value>
+  </data>
+  <data name="Command.Mode.ToSimple" xml:space="preserve">
+    <value>Switch to Simple mode</value>
+  </data>
+  <data name="Onboarding.Progress" xml:space="preserve">
+    <value>Step {0} of {1}</value>
+  </data>
+  <data name="Onboarding.Next" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Onboarding.Finish" xml:space="preserve">
+    <value>Open Finance OS</value>
+  </data>
+  <data name="Onboarding.Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Onboarding.Skip" xml:space="preserve">
+    <value>Skip setup</value>
+  </data>
+  <data name="Onboarding.Welcome.Title" xml:space="preserve">
+    <value>Welcome to Finance OS</value>
+  </data>
+  <data name="Onboarding.Welcome.Description" xml:space="preserve">
+    <value>Tasks, deadlines and reminders for your everyday work, kept on this computer. Setup takes a minute, and every choice can be changed later in Settings.</value>
+  </data>
+  <data name="Onboarding.Mode.Title" xml:space="preserve">
+    <value>How much do you need?</value>
+  </data>
+  <data name="Onboarding.Mode.Description" xml:space="preserve">
+    <value>You can switch at any time; your tasks stay the same.</value>
+  </data>
+  <data name="Onboarding.Mode.Simple.Description" xml:space="preserve">
+    <value>Today's tasks, deadlines, reminders and a calendar. Clear in a minute.</value>
+  </data>
+  <data name="Onboarding.Mode.Advanced.Description" xml:space="preserve">
+    <value>Adds workflows, projects, analytics, the archive and every task field.</value>
+  </data>
+  <data name="Onboarding.Theme.Title" xml:space="preserve">
+    <value>Light or dark?</value>
+  </data>
+  <data name="Onboarding.Theme.Description" xml:space="preserve">
+    <value>“Same as Windows” follows your system setting. You can also pick an accent colour.</value>
+  </data>
+  <data name="Onboarding.Hours.Title" xml:space="preserve">
+    <value>Your working hours</value>
+  </data>
+  <data name="Onboarding.Hours.Description" xml:space="preserve">
+    <value>The calendar highlights them in the day view.</value>
+  </data>
+  <data name="Onboarding.Notifications.Title" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="Onboarding.Notifications.Description" xml:space="preserve">
+    <value>Reminders appear as Windows notifications, even when the app is closed. During quiet hours they wait until the hours end.</value>
+  </data>
+  <data name="Onboarding.Demo" xml:space="preserve">
+    <value>Add a few sample tasks to look around (marked as samples, removed in one click from Settings)</value>
+  </data>
+  <data name="Toast.DemoAdded.Title" xml:space="preserve">
+    <value>Sample tasks added</value>
+  </data>
+  <data name="Toast.DemoAdded.Body" xml:space="preserve">
+    <value>{0} sample tasks. Remove them in Settings → Sample data.</value>
+  </data>
+  <data name="Settings.Demo.Header" xml:space="preserve">
+    <value>Sample data</value>
+  </data>
+  <data name="Settings.Demo.Description" xml:space="preserve">
+    <value>The sample tasks from the setup guide, with their categories, project and tag. Your own tasks are kept; one that used a sample name only loses that link.</value>
+  </data>
+  <data name="Settings.Demo.Remove" xml:space="preserve">
+    <value>Remove sample data</value>
+  </data>
+  <data name="Action.demo.remove" xml:space="preserve">
+    <value>Remove sample data</value>
+  </data>
+  <data name="Demo.Category.Close" xml:space="preserve">
+    <value>Month-end close</value>
+  </data>
+  <data name="Demo.Category.Tax" xml:space="preserve">
+    <value>Taxes</value>
+  </data>
+  <data name="Demo.Project.Audit" xml:space="preserve">
+    <value>Annual audit</value>
+  </data>
+  <data name="Demo.Tag.Urgent" xml:space="preserve">
+    <value>urgent</value>
+  </data>
+  <data name="Demo.Close.Title" xml:space="preserve">
+    <value>Close the books for this month</value>
+  </data>
+  <data name="Demo.Close.Description" xml:space="preserve">
+    <value>Post accruals, reconcile the banks and send the flash report.</value>
+  </data>
+  <data name="Demo.Close.Item1" xml:space="preserve">
+    <value>Accruals posted</value>
+  </data>
+  <data name="Demo.Close.Item2" xml:space="preserve">
+    <value>Fixed asset depreciation</value>
+  </data>
+  <data name="Demo.Close.Item3" xml:space="preserve">
+    <value>P&amp;L variance review</value>
+  </data>
+  <data name="Demo.Bank.Title" xml:space="preserve">
+    <value>Bank reconciliations</value>
+  </data>
+  <data name="Demo.Vat.Title" xml:space="preserve">
+    <value>Pay the VAT</value>
+  </data>
+  <data name="Demo.Expenses.Title" xml:space="preserve">
+    <value>Submit the expense report</value>
+  </data>
+  <data name="Demo.Audit.Title" xml:space="preserve">
+    <value>Answer the auditor's questions</value>
+  </data>
+  <data name="Demo.Audit.Requester" xml:space="preserve">
+    <value>Audit team</value>
+  </data>
+  <data name="Demo.Budget.Title" xml:space="preserve">
+    <value>Update the Q1 budget</value>
+  </data>
+  <data name="Tasks.Row.Demo" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="Settings.About.Copyright" xml:space="preserve">
+    <value>© {0} {1}. All rights reserved.</value>
+  </data>
+</root>
