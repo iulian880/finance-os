@@ -1,5 +1,11 @@
 # Finance OS
 
+![.NET 10](https://img.shields.io/badge/.NET-10%20WPF-512BD4?logo=dotnet&logoColor=white)
+![SQLite + Dapper + FTS5](https://img.shields.io/badge/SQLite-WAL%20%2B%20FTS5-003B57?logo=sqlite&logoColor=white)
+![Tests: 530 passing](https://img.shields.io/badge/tests-530%20passing-brightgreen)
+![Localization: EN / RO](https://img.shields.io/badge/UI-EN%20%2F%20RO-informational)
+![Platform: Windows 10 / 11](https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0078D4)
+
 A Windows desktop app that organizes a finance employee's workday: tasks, a daily view, a calendar and reminders that fire even when the app is closed.
 
 Built with WPF on .NET 10 and SQLite. Runs as a single portable `.exe` with no installation and no administrator rights.
@@ -147,7 +153,7 @@ Portable release zips: `build/release.ps1`.
 
 ## Status
 
-Version 0.1.0 (portable release). [TODO: current status and next steps]
+**v0.1.0** — feature-complete portable Windows release with 530 passing automated tests (domain, SQLite/Dapper, WPF ViewModels & UI, and architecture boundary rules). Core workflows (tasks, reminders, calendar, FTS5 search, multi-entity undo, backup/recovery, and live EN/RO localization) are implemented and verified; `FinanceOS.Integrations` is scaffolded for optional future connectors such as calendar sync or recurring close-cycle templates.
 
 ## Notes
 
