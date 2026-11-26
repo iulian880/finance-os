@@ -21,5 +21,7 @@
   <PropertyGroup>
     <WindowsTfm>net10.0-windows10.0.19041.0</WindowsTfm>
     <WindowsMinVersion>10.0.17763.0</WindowsMinVersion>
+    <!-- Lets restore, build and IDE tooling load the Windows projects on macOS/Linux; no effect on Windows. -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 </Project>
